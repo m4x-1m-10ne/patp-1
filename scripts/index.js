@@ -47,6 +47,7 @@ if (document.getElementById('ymap')) {
     var myMap;
     var myPlacemark;
     var currentMapType = 'map';
+    var isMapActive = false;
     
     ymaps.ready(function () {
         myMap = new ymaps.Map('ymap', {
@@ -69,6 +70,31 @@ if (document.getElementById('ymap')) {
         
         myPlacemark.events.add('click', function (e) {
             myPlacemark.balloon.open();
+        });
+        
+        myMap.behaviors.disable(['scrollZoom', 'dblClickZoom', 'drag', 'multiTouch']);
+        
+        myMap.events.add('click', function (e) {
+            if (!isMapActive) {
+                isMapActive = true;
+                myMap.behaviors.enable(['scrollZoom', 'dblClickZoom', 'drag', 'multiTouch']);
+                showMapNotification('Карта активирована. Теперь можно масштабировать и перемещать');
+                
+                setTimeout(function() {
+                    if (isMapActive) {
+                        myMap.behaviors.disable(['scrollZoom', 'dblClickZoom', 'drag', 'multiTouch']);
+                        isMapActive = false;
+                        showMapNotification('Карта деактивирована. Нажмите на карту для управления');
+                    }
+                }, 10000);
+            }
+        });
+        
+        document.addEventListener('click', function(e) {
+            if (isMapActive && !e.target.closest('#mapContainer')) {
+                myMap.behaviors.disable(['scrollZoom', 'dblClickZoom', 'drag', 'multiTouch']);
+                isMapActive = false;
+            }
         });
         
         document.getElementById('mapLocateBtn').addEventListener('click', function() {
@@ -124,6 +150,8 @@ if (document.getElementById('ymap')) {
                 
                 mapContainer.classList.add('map-fullscreen');
                 this.innerHTML = '<i class="fas fa-compress"></i>';
+                myMap.behaviors.enable(['scrollZoom', 'dblClickZoom', 'drag', 'multiTouch']);
+                isMapActive = true;
             } else {
                 if (document.exitFullscreen) {
                     document.exitFullscreen();
@@ -135,19 +163,9 @@ if (document.getElementById('ymap')) {
                 
                 mapContainer.classList.remove('map-fullscreen');
                 this.innerHTML = '<i class="fas fa-expand"></i>';
+                myMap.behaviors.disable(['scrollZoom', 'dblClickZoom', 'drag', 'multiTouch']);
+                isMapActive = false;
             }
-        });
-        
-        document.getElementById('mapPatpBtn').addEventListener('click', function() {
-            myMap.setCenter(coords, 16, {
-                duration: 1000
-            });
-            
-            setTimeout(function() {
-                myPlacemark.balloon.open();
-            }, 1000);
-            
-            showMapNotification('Возврат к местоположению ПАТП №1');
         });
         
         document.addEventListener('fullscreenchange', exitHandler);
@@ -162,6 +180,8 @@ if (document.getElementById('ymap')) {
                 
                 mapContainer.classList.remove('map-fullscreen');
                 fullscreenBtn.innerHTML = '<i class="fas fa-expand"></i>';
+                myMap.behaviors.disable(['scrollZoom', 'dblClickZoom', 'drag', 'multiTouch']);
+                isMapActive = false;
             }
         }
     });

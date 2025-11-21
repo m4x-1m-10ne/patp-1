@@ -52,13 +52,13 @@ if (document.getElementById('ymap')) {
     
     function resetInactivityTimer() {
         clearTimeout(inactivityTimer);
-        inactivityTimer = setTimeout(function() {
-            if (isMapActive) {
+        if (isMapActive) {
+            inactivityTimer = setTimeout(function() {
                 myMap.behaviors.disable(['scrollZoom', 'dblClickZoom', 'drag', 'multiTouch']);
                 isMapActive = false;
                 showMapNotification('Карта деактивирована. Нажмите на карту для управления');
-            }
-        }, 10000);
+            }, 10000);
+        }
     }
     
     function activateMap() {
@@ -112,14 +112,22 @@ if (document.getElementById('ymap')) {
             }
         });
         
+        myMap.events.add('actiontick', function (e) {
+            if (isMapActive) {
+                resetInactivityTimer();
+            }
+        });
+        
         document.addEventListener('click', function(e) {
             if (isMapActive && !e.target.closest('#mapContainer')) {
                 myMap.behaviors.disable(['scrollZoom', 'dblClickZoom', 'drag', 'multiTouch']);
                 isMapActive = false;
+                clearTimeout(inactivityTimer);
             }
         });
         
         document.getElementById('mapLocateBtn').addEventListener('click', function() {
+            activateMap();
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function(position) {
                     var userCoords = [position.coords.latitude, position.coords.longitude];
@@ -146,6 +154,7 @@ if (document.getElementById('ymap')) {
         });
         
         document.getElementById('mapLayerBtn').addEventListener('click', function() {
+            activateMap();
             var mapTypes = ['map', 'satellite', 'hybrid'];
             var currentIndex = mapTypes.indexOf(currentMapType);
             var nextIndex = (currentIndex + 1) % mapTypes.length;
@@ -161,6 +170,7 @@ if (document.getElementById('ymap')) {
         });
         
         document.getElementById('mapFullscreenBtn').addEventListener('click', function() {
+            activateMap();
             var mapContainer = document.getElementById('mapContainer');
             
             if (!document.fullscreenElement) {
@@ -174,7 +184,6 @@ if (document.getElementById('ymap')) {
                 
                 mapContainer.classList.add('map-fullscreen');
                 this.innerHTML = '<i class="fas fa-compress"></i>';
-                activateMap();
             } else {
                 if (document.exitFullscreen) {
                     document.exitFullscreen();
@@ -186,9 +195,8 @@ if (document.getElementById('ymap')) {
                 
                 mapContainer.classList.remove('map-fullscreen');
                 this.innerHTML = '<i class="fas fa-expand"></i>';
-                myMap.behaviors.disable(['scrollZoom', 'dblClickZoom', 'drag', 'multiTouch']);
-                isMapActive = false;
             }
+            resetInactivityTimer();
         });
         
         document.addEventListener('fullscreenchange', exitHandler);
@@ -203,12 +211,8 @@ if (document.getElementById('ymap')) {
                 
                 mapContainer.classList.remove('map-fullscreen');
                 fullscreenBtn.innerHTML = '<i class="fas fa-expand"></i>';
-                myMap.behaviors.disable(['scrollZoom', 'dblClickZoom', 'drag', 'multiTouch']);
-                isMapActive = false;
             }
         }
-        
-        resetInactivityTimer();
     });
     
     function showMapNotification(message) {

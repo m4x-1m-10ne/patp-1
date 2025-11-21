@@ -48,6 +48,27 @@ if (document.getElementById('ymap')) {
     var myPlacemark;
     var currentMapType = 'map';
     var isMapActive = false;
+    var inactivityTimer;
+    
+    function resetInactivityTimer() {
+        clearTimeout(inactivityTimer);
+        inactivityTimer = setTimeout(function() {
+            if (isMapActive) {
+                myMap.behaviors.disable(['scrollZoom', 'dblClickZoom', 'drag', 'multiTouch']);
+                isMapActive = false;
+                showMapNotification('Карта деактивирована. Нажмите на карту для управления');
+            }
+        }, 10000);
+    }
+    
+    function activateMap() {
+        if (!isMapActive) {
+            isMapActive = true;
+            myMap.behaviors.enable(['scrollZoom', 'dblClickZoom', 'drag', 'multiTouch']);
+            showMapNotification('Карта активирована. Теперь можно масштабировать и перемещать');
+        }
+        resetInactivityTimer();
+    }
     
     ymaps.ready(function () {
         myMap = new ymaps.Map('ymap', {
@@ -70,23 +91,24 @@ if (document.getElementById('ymap')) {
         
         myPlacemark.events.add('click', function (e) {
             myPlacemark.balloon.open();
+            resetInactivityTimer();
         });
         
         myMap.behaviors.disable(['scrollZoom', 'dblClickZoom', 'drag', 'multiTouch']);
         
         myMap.events.add('click', function (e) {
-            if (!isMapActive) {
-                isMapActive = true;
-                myMap.behaviors.enable(['scrollZoom', 'dblClickZoom', 'drag', 'multiTouch']);
-                showMapNotification('Карта активирована. Теперь можно масштабировать и перемещать');
-                
-                setTimeout(function() {
-                    if (isMapActive) {
-                        myMap.behaviors.disable(['scrollZoom', 'dblClickZoom', 'drag', 'multiTouch']);
-                        isMapActive = false;
-                        showMapNotification('Карта деактивирована. Нажмите на карту для управления');
-                    }
-                }, 10000);
+            activateMap();
+        });
+        
+        myMap.events.add('mousemove', function (e) {
+            if (isMapActive) {
+                resetInactivityTimer();
+            }
+        });
+        
+        myMap.events.add('wheel', function (e) {
+            if (isMapActive) {
+                resetInactivityTimer();
             }
         });
         
@@ -113,6 +135,7 @@ if (document.getElementById('ymap')) {
                     myMap.geoObjects.add(userPlacemark);
                     myMap.setCenter(userCoords, 15, {duration: 1000});
                     showMapNotification('Ваше местоположение отмечено на карте');
+                    resetInactivityTimer();
                 }, function(error) {
                     console.error('Ошибка получения геолокации:', error);
                     showMapNotification('Не удалось определить ваше местоположение');
@@ -134,6 +157,7 @@ if (document.getElementById('ymap')) {
             this.innerHTML = '<i class="fas ' + icons[nextIndex] + '"></i>';
             
             showMapNotification('Тип карты изменен');
+            resetInactivityTimer();
         });
         
         document.getElementById('mapFullscreenBtn').addEventListener('click', function() {
@@ -150,8 +174,7 @@ if (document.getElementById('ymap')) {
                 
                 mapContainer.classList.add('map-fullscreen');
                 this.innerHTML = '<i class="fas fa-compress"></i>';
-                myMap.behaviors.enable(['scrollZoom', 'dblClickZoom', 'drag', 'multiTouch']);
-                isMapActive = true;
+                activateMap();
             } else {
                 if (document.exitFullscreen) {
                     document.exitFullscreen();
@@ -184,6 +207,8 @@ if (document.getElementById('ymap')) {
                 isMapActive = false;
             }
         }
+        
+        resetInactivityTimer();
     });
     
     function showMapNotification(message) {

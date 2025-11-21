@@ -1,0 +1,135 @@
+.contact-info {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+.contact-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.contact-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.contact-method {
+    background: var(--light-bg);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.contact-method h4 {
+    color: var(--text-color);
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.contact-method p {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.info-list {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.info-list ul {
+    padding-left: 20px;
+}
+
+.info-list li {
+    margin-bottom: 10px;
+    color: #555;
+    line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+    .documents-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .documents-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .document-card {
+        margin: 0 auto;
+        max-width: 400px;
+    }
+    
+    .document-content {
+        padding: 15px;
+    }
+    
+    .document-icon {
+        height: 80px;
+        font-size: 30px;
+    }
+    
+    .contact-methods {
+        grid-template-columns: 1fr;
+    }
+    
+    .documents-intro,
+    .contact-info,
+    .info-list {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .documents-grid {
+        gap: 12px;
+    }
+    
+    .document-card {
+        max-width: 100%;
+    }
+    
+    .document-content {
+        padding: 12px;
+    }
+    
+    .document-icon {
+        height: 70px;
+        font-size: 25px;
+    }
+    
+    .document-content h3 {
+        font-size: 16px;
+        min-height: auto;
+    }
+    
+    .document-content p {
+        font-size: 13px;
+        min-height: auto;
+    }
+    
+    .document-btn {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+    
+    .documents-intro,
+    .contact-info,
+    .info-list {
+        padding: 15px;
+    }
+}

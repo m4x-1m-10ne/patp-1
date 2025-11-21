@@ -1,0 +1,51 @@
+.breadcrumb-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/passazhirskie-perevozki.jpg'),#00000000;
+    color: white;
+    padding: 60px 0 40px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.insurance-info {
+    background: #f8f9fa;
+    border-left: 4px solid var(--primary-color);
+    padding: 25px;
+    margin: 30px 0;
+    border-radius: 5px;
+}
+
+.insurance-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.documents-list {
+    margin: 25px 0;
+}
+
+.documents-list a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 15px;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.documents-list a:hover {
+    background: var(--light-bg);
+    border-color: var(--primary-color);
+    transform: translateX(5px);
+}
+
+.documents-list a i {
+    color: var(--primary-color);
+}
+
+

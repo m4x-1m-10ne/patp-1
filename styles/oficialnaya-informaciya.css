@@ -1,0 +1,30 @@
+.info-section {
+    background-color: #f1f5f9;
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.info-section h3 {
+    color: var(--text-color);
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.info-section p {
+    color: #666666;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.info-section a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.info-section a:hover {
+    color: #2a5cd6;
+    text-decoration: underline;
+}
+

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ПАТП №1 - Пассажирские перевозки в Вологде</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <link href="styles/mediaqueries.css" rel="stylesheet">
+    <link href="styles/index.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+</head>
+<body>
+    <header class="header-area">
+        <div class="container-fluid">
+            <div class="header-container">
+                <div class="header-left">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="https://mupatp1.ru/assets/template/img/logo_Ptp.png" alt="Логотип ПАТП №1">
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="header-center">
+                    <div class="main-menu">
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="https://mupatp1.ru/raspisanie/" class="menu-icon">Расписание<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="submenu-mainmenu">
+                                        <li><a href="https://citybus35.ru/" target="_blank">Умный транспорт</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="oplata-proezda.html" class="menu-icon">Оплата проезда<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="submenu-mainmenu">
+                                        <li><a href="https://bilet.nspk.ru/" target="_blank">Оплата банковской картой</a></li>
+                                        <li><a href="https://t-karta.ru" target="_blank">История поездок (кабинет)</a></li>
+                                        <li><a href="pravila-asop.html">Правила АСОП</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="uslugi.html" class="menu-icon">Услуги<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="submenu-mainmenu">
+                                        <li><a href="zakaznye-perevozki.html">Заказные перевозки</a></li>
+                                        <li><a href="passazhirskie-perevozki.html">Пассажирские перевозки</a></li>
+                                        <li><a href="perevozka-detej.html">Перевозка детей</a></li>
+                                        <li><a href="texnicheskoe-obsluzhivanie.html">Техническое обслуживание</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="o-kompanii.html" class="menu-icon">О компании<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="submenu-mainmenu">
+                                        <li><a href="novosti.html">Новости</a></li>
+                                        <li><a href="kontakty.html">Контакты</a></li>
+                                        <li><a href="avtopark.html">Автопарк</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="oficialnaya-informaciya.html" class="menu-icon">Официальная информация<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="submenu-mainmenu">
+                                        <li><a href="dokumenty.html">Документы</a></li>
+                                        <li><a href="protivodejstvie-korrupcii.html">Противодействие коррупции</a></li>
+                                        <li><a href="informaciya-ot-prokuratury.html">Информация от Прокуратуры г. Вологда</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                
+                <div class="header-right">
+                    <a href="rabota.html" class="header-btn">
+                        <i class="fas fa-briefcase"></i> РАБОТА У НАС
+                    </a>
+                    
+                    <button class="navbar-toggler" id="navbarToggler">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+            <div class="mobile-menu" id="mobileMenu">
+                <div class="mobile-menu-container">
+                    <div class="mobile-menu-section">
+                        <h3 class="mobile-menu-title">Расписание</h3>
+                        <ul class="mobile-menu-links">
+                            <li><a href="https://mupatp1.ru/raspisanie/"><i class="fas fa-bus"></i> Расписание автобусов</a></li>
+                            <li><a href="https://citybus35.ru/" target="_blank" class="external-link"><i class="fas fa-map-marked-alt"></i> Умный транспорт</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mobile-menu-section">
+                        <h3 class="mobile-menu-title">Оплата проезда</h3>
+                        <ul class="mobile-menu-links">
+                            <li><a href="oplata-proezda.html"><i class="fas fa-money-bill-wave"></i> Стоимость проезда</a></li>
+                            <li><a href="https://bilet.nspk.ru/" target="_blank" class="external-link"><i class="fas fa-credit-card"></i> Оплата картой</a></li>
+                            <li><a href="https://t-karta.ru" target="_blank" class="external-link"><i class="fas fa-history"></i> История поездок</a></li>
+                            <li><a href="pravila-asop.html"><i class="fas fa-file-contract"></i> Правила АСОП</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mobile-menu-section">
+                        <h3 class="mobile-menu-title">Услуги</h3>
+                        <ul class="mobile-menu-links">
+                            <li><a href="uslugi.html"><i class="fas fa-concierge-bell"></i> Все услуги</a></li>
+                            <li><a href="zakaznye-perevozki.html"><i class="fas fa-bus-alt"></i> Заказные перевозки</a></li>
+                            <li><a href="passazhirskie-perevozki.html"><i class="fas fa-users"></i> Пассажирские перевозки</a></li>
+                            <li><a href="perevozka-detej.html"><i class="fas fa-child"></i> Перевозка детей</a></li>
+                            <li><a href="texnicheskoe-obsluzhivanie.html"><i class="fas fa-cogs"></i> Техническое обслуживание</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mobile-menu-section">
+                        <h3 class="mobile-menu-title">О компании</h3>
+                        <ul class="mobile-menu-links">
+                            <li><a href="o-kompanii.html"><i class="fas fa-building"></i> О нас</a></li>
+                            <li><a href="novosti.html"><i class="far fa-newspaper"></i> Новости</a></li>
+                            <li><a href="kontakty.html"><i class="fas fa-address-book"></i> Контакты</a></li>
+                            <li><a href="avtopark.html"><i class="fas fa-car"></i> Автопарк</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mobile-menu-section">
+                        <h3 class="mobile-menu-title">Официальная информация</h3>
+                        <ul class="mobile-menu-links">
+                            <li><a href="oficialnaya-informaciya.html"><i class="fas fa-info-circle"></i> Официальная информация</a></li>
+                            <li><a href="dokumenty.html"><i class="fas fa-file-alt"></i> Документы</a></li>
+                            <li><a href="protivodejstvie-korrupcii.html"><i class="fas fa-gavel"></i> Противодействие коррупции</a></li>
+                            <li><a href="informaciya-ot-prokuratury.html"><i class="fas fa-balance-scale"></i> Информация от Прокуратуры</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Пассажирские автотранспортные перевозки</h1>
+            <p>АО «ПАТП №1» - крупнейший перевозчик Вологды.</p>
+            <a href="o-kompanii.html" class="btn">Узнать больше</a>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-content">
+                    <div class="stat-icon">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <div class="stat-divider">/</div>
+                    <div class="stat-number" data-count="130">0</div>
+                </div>
+                <div class="stat-text">Автобусов в парке</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-content">
+                    <div class="stat-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <div class="stat-divider">/</div>
+                    <div class="stat-number" data-count="15">0</div>
+                </div>
+                <div class="stat-text">Маршрутов по городу</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-content">
+                    <div class="stat-icon">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <div class="stat-divider">/</div>
+                    <div class="stat-number" data-count="178">0</div>
+                </div>
+                <div class="stat-text">Протяженность маршрутной сети (км)</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="advantages-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Наши преимущества</h2>
+                <p>Почему выбирают именно нас</p>
+            </div>
+
+            <div class="advantages-grid">
+                <div class="advantage-item">
+                    <div class="advantage-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Безопасность</h4>
+                    <p>Все автобусы соответствуют строгим требованиям безопасности и регулярно проходят технический осмотр</p>
+                </div>
+
+                <div class="advantage-item">
+                    <div class="advantage-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>Опытные водители</h4>
+                    <p>Профессиональные водители с многолетним стажем работы и безаварийным вождением</p>
+                </div>
+
+                <div class="advantage-item">
+                    <div class="advantage-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h4>Современный парк</h4>
+                    <p>Обновленный автопарк с комфортабельными автобусами, оснащенными кондиционерами и системами навигации</p>
+                </div>
+
+                <div class="advantage-item">
+                    <div class="advantage-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h4>Пунктуальность</h4>
+                    <p>Строгое соблюдение графика и сроков выполнения заказов</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: #f1f5f9;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Последние новости</h2>
+                <p>Будьте в курсе изменений в маршрутах и других важных событий</p>
+            </div>
+            
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-img" style="background-color: #3a6ce6;"></div>
+                    <div class="news-content">
+                        <div class="news-date">
+                            <i class="far fa-calendar-alt"></i> 31 ОКТ, 2025
+                        </div>
+                        <h3>Изменения в маршруте №6</h3>
+                        <p>С 01 ноября 2025 года будет изменена схема движения автобусов по маршруту №6 «парк «Осановская роща»».</p>
+                        <div class="news-btn-container">
+                            <a href="31.10.2025.html" class="btn">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="news-card inactive">
+                    <div class="news-img" style="background-color: #cccccc;"></div>
+                    <div class="news-content">
+                        <div class="news-date">
+                            <i class="far fa-calendar-alt"></i> 27 ОКТ, 2025
+                        </div>
+                        <h3>Ограничения мобильной связи</h3>
+                        <p>В связи с ограничениями мобильной связи и интернета, вводимыми на территории Вологодской области.</p>
+                        <div class="news-btn-container">
+                            <a href="novosti2.html" class="btn">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="news-card inactive">
+                    <div class="news-img" style="background-color: #cccccc;"></div>
+                    <div class="news-content">
+                        <div class="news-date">
+                            <i class="far fa-calendar-alt"></i> 17 ОКТ, 2025
+                        </div>
+                        <h3>Зимний период маршрута №42</h3>
+                        <p>С 20 октября 2025 года маршрут №42 «Дальняя - Екимцево» переходит на зимний период.</p>
+                        <div class="news-btn-container">
+                            <a href="novosti3.html" class="btn">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="novosti.html" class="btn">Все новости</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Мы на карте</h2>
+                <div class="map-notice">
+                    <i class="fas fa-info-circle"></i>
+                    <span>Для масштабирования карты нажмите на нее, затем используйте колесико мыши</span>
+                </div>
+            </div>
+            
+            <div class="map-container" id="mapContainer">
+                <div id="ymap"></div>
+                
+                <div class="map-controls">
+                    <button class="map-control-btn" id="mapLocateBtn" title="Определить мое местоположение">
+                        <i class="fas fa-location-arrow"></i>
+                    </button>
+                    <button class="map-control-btn" id="mapLayerBtn" title="Сменить тип карты">
+                        <i class="fas fa-layer-group"></i>
+                    </button>
+                    <button class="map-control-btn" id="mapFullscreenBtn" title="Полноэкранный режим">
+                        <i class="fas fa-expand"></i>
+                    </button>
+                    <button class="map-control-btn" id="mapPatpBtn" title="Вернуться к ПАТП №1">
+                        <i class="fas fa-building"></i>
+                    </button>
+                </div>
+                
+                <div class="map-notifications" id="mapNotifications"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3><a href="o-kompanii.html" style="color: white; text-decoration: none;">О нашей компании</a></h3>
+                    
+                    <div class="footer-contact-info">
+                        <div class="footer-contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+78172556670">+7 (8172) 55-66-70</a>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:mail@mupatp1.ru">mail@mupatp1.ru</a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-bottom-content">
+                        <div class="footer-image-container">
+                            <img src="img/win.png" alt="Победа">
+                        </div>
+                        <div class="social-links">
+                            <a href="https://vk.com/patp1vologda" target="_blank"><i class="fab fa-vk"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Основные разделы</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://mupatp1.ru/raspisanie/">Расписание</a></li>
+                        <li><a href="oplata-proezda.html">Оплата проезда</a></li>
+                        <li><a href="uslugi.html">Услуги</a></li>
+                        <li><a href="novosti.html">Новости</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Полезные ссылки</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://citybus35.ru/" target="_blank">Умный транспорт</a></li>
+                        <li><a href="rabota.html">Работа у нас</a></li>
+                        <li><a href="https://yc.mupatp1.ru/" target="_blank">Учебный центр</a></li>
+                        <li><a href="dokumenty.html">Документы</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 АО «ПАТП №1». Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <a href="rabota.html" id="workButton">
+        <i class="fas fa-briefcase"></i>
+    </a>
+
+    <div class="job-popup-overlay" id="jobPopup">
+        <div class="job-popup">
+            <div class="job-popup-icon">
+                <i class="fas fa-briefcase"></i>
+            </div>
+            <h3>Присоединяйтесь к нашей команде!</h3>
+            <p>Мы ищем ответственных и профессиональных водителей, кондукторов и технических специалистов. Станьте частью крупнейшего перевозчика Вологды!</p>
+            <div class="job-popup-buttons">
+                <a href="rabota.html" class="job-popup-btn primary" id="vacanciesBtn">Узнать о вакансиях</a>
+                <button class="job-popup-btn secondary" id="laterBtn">Напомнить позже</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/index.js"></script>
+</body>
+</html>

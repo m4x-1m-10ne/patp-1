@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Документы - АО «ПАТП №1»</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <link href="styles/mediaqueries.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/dokumenty.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+</head>
+<body>
+    <header class="header-area">
+        <div class="container-fluid">
+            <div class="header-container">
+                <div class="header-left">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="https://mupatp1.ru/assets/template/img/logo_Ptp.png" alt="Логотип ПАТП №1">
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="header-center">
+                    <div class="main-menu">
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="https://mupatp1.ru/raspisanie/" class="menu-icon">Расписание<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="submenu-mainmenu">
+                                        <li><a href="https://citybus35.ru/" target="_blank">Умный транспорт</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="oplata-proezda.html" class="menu-icon">Оплата проезда<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="submenu-mainmenu">
+                                        <li><a href="https://bilet.nspk.ru/" target="_blank">Оплата банковской картой</a></li>
+                                        <li><a href="https://t-karta.ru" target="_blank">История поездок (кабинет)</a></li>
+                                        <li><a href="pravila-asop.html">Правила АСОП</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="uslugi.html" class="menu-icon">Услуги<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="submenu-mainmenu">
+                                        <li><a href="zakaznye-perevozki.html">Заказные перевозки</a></li>
+                                        <li><a href="passazhirskie-perevozki.html">Пассажирские перевозки</a></li>
+                                        <li><a href="perevozka-detej.html">Перевозка детей</a></li>
+                                        <li><a href="texnicheskoe-obsluzhivanie.html">Техническое обслуживание</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="o-kompanii.html" class="menu-icon">О компании<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="submenu-mainmenu">
+                                        <li><a href="novosti.html">Новости</a></li>
+                                        <li><a href="kontakty.html">Контакты</a></li>
+                                        <li><a href="avtopark.html">Автопарк</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="oficialnaya-informaciya.html" class="menu-icon">Официальная информация<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="submenu-mainmenu">
+                                        <li><a href="dokumenty.html">Документы</a></li>
+                                        <li><a href="protivodejstvie-korrupcii.html">Противодействие коррупции</a></li>
+                                        <li><a href="informaciya-ot-prokuratury.html">Информация от Прокуратуры г. Вологда</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                
+                <div class="header-right">
+                    <a href="rabota.html" class="header-btn">
+                        <i class="fas fa-briefcase"></i> РАБОТА У НАС
+                    </a>
+                    
+                    <button class="navbar-toggler" id="navbarToggler">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+            <div class="mobile-menu" id="mobileMenu">
+                <div class="mobile-menu-container">
+                    <div class="mobile-menu-section">
+                        <h3 class="mobile-menu-title">Расписание</h3>
+                        <ul class="mobile-menu-links">
+                            <li><a href="https://mupatp1.ru/raspisanie/"><i class="fas fa-bus"></i> Расписание автобусов</a></li>
+                            <li><a href="https://citybus35.ru/" target="_blank" class="external-link"><i class="fas fa-map-marked-alt"></i> Умный транспорт</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mobile-menu-section">
+                        <h3 class="mobile-menu-title">Оплата проезда</h3>
+                        <ul class="mobile-menu-links">
+                            <li><a href="oplata-proezda.html"><i class="fas fa-money-bill-wave"></i> Стоимость проезда</a></li>
+                            <li><a href="https://bilet.nspk.ru/" target="_blank" class="external-link"><i class="fas fa-credit-card"></i> Оплата картой</a></li>
+                            <li><a href="https://t-karta.ru" target="_blank" class="external-link"><i class="fas fa-history"></i> История поездок</a></li>
+                            <li><a href="pravila-asop.html"><i class="fas fa-file-contract"></i> Правила АСОП</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mobile-menu-section">
+                        <h3 class="mobile-menu-title">Услуги</h3>
+                        <ul class="mobile-menu-links">
+                            <li><a href="uslugi.html"><i class="fas fa-concierge-bell"></i> Все услуги</a></li>
+                            <li><a href="zakaznye-perevozki.html"><i class="fas fa-bus-alt"></i> Заказные перевозки</a></li>
+                            <li><a href="passazhirskie-perevozki.html"><i class="fas fa-users"></i> Пассажирские перевозки</a></li>
+                            <li><a href="perevozka-detej.html"><i class="fas fa-child"></i> Перевозка детей</a></li>
+                            <li><a href="texnicheskoe-obsluzhivanie.html"><i class="fas fa-cogs"></i> Техническое обслуживание</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mobile-menu-section">
+                        <h3 class="mobile-menu-title">О компании</h3>
+                        <ul class="mobile-menu-links">
+                            <li><a href="o-kompanii.html"><i class="fas fa-building"></i> О нас</a></li>
+                            <li><a href="novosti.html"><i class="far fa-newspaper"></i> Новости</a></li>
+                            <li><a href="kontakty.html"><i class="fas fa-address-book"></i> Контакты</a></li>
+                            <li><a href="avtopark.html"><i class="fas fa-car"></i> Автопарк</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mobile-menu-section">
+                        <h3 class="mobile-menu-title">Официальная информация</h3>
+                        <ul class="mobile-menu-links">
+                            <li><a href="oficialnaya-informaciya.html"><i class="fas fa-info-circle"></i> Официальная информация</a></li>
+                            <li><a href="dokumenty.html"><i class="fas fa-file-alt"></i> Документы</a></li>
+                            <li><a href="protivodejstvie-korrupcii.html"><i class="fas fa-gavel"></i> Противодействие коррупции</a></li>
+                            <li><a href="informaciya-ot-prokuratury.html"><i class="fas fa-balance-scale"></i> Информация от Прокуратуры</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="breadcrumb-section">
+        <div class="container">
+            <h1>Документы</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                    <li class="breadcrumb-item"><a href="oficialnaya-informaciya.html">Официальная информация</a></li>
+                    <li class="breadcrumb-item active">Документы</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="info-section">
+                <h3>Официальные документы АО «ПАТП №1»</h3>
+                <p>На этой странице представлены официальные документы АО «ПАТП №1», включая информацию о реорганизации предприятия, политику обработки персональных данных, корпоративные программы, паспорта доступности и страховые документы.</p>
+                <p>Вся документация регулярно обновляется и соответствует действующему законодательству Российской Федерации. Если у вас возникли вопросы по представленным документам, вы можете обратиться по телефону: <a href="tel:+78172556670">+7 (8172) 55-66-70</a> или по электронной почте: <a href="mailto:mail@mupatp1.ru">mail@mupatp1.ru</a></p>
+            </div>
+            
+            <div class="documents-category">
+                <h3 class="category-title">Основные документы</h3>
+                <div class="documents-grid">
+                    <div class="document-card">
+                        <div class="document-content">
+                            <div class="document-icon">
+                                <i class="fas fa-file-contract"></i>
+                            </div>
+                            <h3>Реорганизация предприятия</h3>
+                            <p>Документы о реорганизации МУП городского округа города Вологды "ПАТП №1" путем преобразования в акционерное общество "ПАТП №1"</p>
+                            <div class="document-meta">
+                                <div class="document-date">
+                                    <i class="far fa-calendar-alt"></i> 2024
+                                </div>
+                                <a href="https://mupatp1.ru/uploads/procuratura/12_2023/596.pdf" class="document-btn" target="_blank">
+                                    <i class="fas fa-eye"></i> Посмотреть
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="document-card">
+                        <div class="document-content">
+                            <div class="document-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3>Политика конфиденциальности</h3>
+                            <p>Политика в отношении обработки персональных данных в соответствии с законодательством РФ</p>
+                            <div class="document-meta">
+                                <div class="document-date">
+                                    <i class="far fa-calendar-alt"></i> 2023
+                                </div>
+                                <a href="https://mupatp1.ru/uploads/procuratura/doc10362420230214154707.pdf" class="document-btn" target="_blank">
+                                    <i class="fas fa-eye"></i> Посмотреть
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="document-card">
+                        <div class="document-content">
+                            <div class="document-icon">
+                                <i class="fas fa-file-medical"></i>
+                            </div>
+                            <h3>Корпоративная программа здоровья</h3>
+                            <p>Типовая корпоративная программа сохранения здоровья на рабочем месте МУП ПАТП №1</p>
+                            <div class="document-meta">
+                                <div class="document-date">
+                                    <i class="far fa-calendar-alt"></i> Актуально
+                                </div>
+                                <a href="https://mupatp1.ru/uploads/procuratura/Типовая корпоративная программа сохранения здоровья на рабочем месте МУП ПАТП №1.pdf" class="document-btn" target="_blank">
+                                    <i class="fas fa-eye"></i> Посмотреть
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="documents-category">
+                <h3 class="category-title">Доступность услуг</h3>
+                <div class="documents-grid">
+                    <div class="document-card">
+                        <div class="document-content">
+                            <div class="document-icon">
+                                <i class="fas fa-universal-access"></i>
+                            </div>
+                            <h3>Паспорт доступности</h3>
+                            <p>Паспорта доступности транспортных средств и услуг для пассажиров из числа инвалидов</p>
+                            <div class="document-meta">
+                                <div class="document-date">
+                                    <i class="far fa-calendar-alt"></i> Актуально
+                                </div>
+                                <a href="https://mupatp1.ru/Паспорт доступности услуг для инвалидов_2.pdf" class="document-btn" target="_blank">
+                                    <i class="fas fa-eye"></i> Посмотреть
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="document-card">
+                        <div class="document-content">
+                            <div class="document-icon">
+                                <i class="fas fa-folder-open"></i>
+                            </div>
+                            <h3>Паспорт доступности</h3>
+                            <p>Паспорт доступности услуги по перевозке пассажиров автомобильным (наземным электрическим) транспортом в городском сообщении для пассажиров из числа инвалидов</p>
+                            <div class="document-meta">
+                                <div class="document-date">
+                                    <i class="far fa-calendar-alt"></i> Актуально
+                                </div>
+                                <a href="https://mupatp1.ru/uploads/docs/Pasport_2.pdf" class="document-btn" target="_blank">
+                                    <i class="fas fa-eye"></i> Посмотреть
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="insurance-section">
+                <h3>Страхование ответственности перевозчика</h3>
+                
+                <div class="insurance-info">
+                    <p>АО «ПАТП №1» уведомляет, что ОТВЕТСТВЕННОСТЬ ПЕРЕВОЗЧИКА ПО ОБЯЗАТЕЛЬСТВАМ, ВОЗНИКАЮЩИМ ВСЛЕДСТВИЕ ПРИЧИНЕНИЯ ПРИ ПЕРЕВОЗКАХ ВРЕДА ЖИЗНИ, ЗДОРОВЬЮ, ИМУЩЕСТВУ ПАССАЖИРОВ, ЗАСТРАХОВАНА в Акционерном обществе «Страховое общество газовой промышленности».</p>
+                    
+                    <p>Договор страхования предусматривает страхование от следующих рисков:</p>
+                    <ul>
+                        <li>За причинение вреда жизни потерпевшего - не менее 2 025 000 рублей на 1 пассажира</li>
+                        <li>За причинение вреда здоровью потерпевшего - не менее 2 000 000 рублей на 1 пассажира</li>
+                        <li>За причинение вреда имуществу потерпевшего - не менее 23 000 рублей на 1 пассажира</li>
+                    </ul>
+                    
+                    <p><strong>Контактная информация страховой компании:</strong></p>
+                    <p>Вологодское отделение Череповецкого филиала АО «СОГАЗ»:<br>
+                    160035, Вологодская обл., г. Вологда, ул. С. Орлова, д. 4.<br>
+                    Телефон: 8 (800) 333-0-888; 8 (8202) 202-375<br>
+                    E-mail: <a href="mailto:sogaz@sogaz.ru">sogaz@sogaz.ru</a></p>
+                </div>
+
+                <div class="insurance-contracts">
+                    <h4>Договоры страхования:</h4>
+                    
+                    <div class="insurance-contract">
+                        <p><strong>Договор № GAZX22345881242000</strong><br>
+                        от 23.05.2023<br>
+                        Срок действия: с 26.05.2023 – 25.05.2024 г.</p>
+                    </div>
+                    
+                    <div class="insurance-contract">
+                        <p><strong>Договор № GAZX22370642878000</strong><br>
+                        от 19.07.2023<br>
+                        Срок действия: с 19.07.2023 – 18.07.2024 г.</p>
+                    </div>
+                    
+                    <div class="insurance-contract">
+                        <p><strong>Договор № GAZX22328297119000</strong><br>
+                        от 18.09.2023<br>
+                        Срок действия: с 29.09.2023 – 28.09.2024 г.</p>
+                    </div>
+                    
+                    <div class="insurance-contract">
+                        <p><strong>Договор № GAZX22458094126000</strong><br>
+                        от 15.01.2024<br>
+                        Срок действия: с 15.01.2024 – 14.01.2025 г.</p>
+                    </div>
+                    
+                    <div class="insurance-contract">
+                        <p><strong>Договор № GAZX22474668155000</strong><br>
+                        от 09.04.2024 г.<br>
+                        Срок действия: с 10.04.2024 – 09.04.2025 г.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3><a href="o-kompanii.html" style="color: white; text-decoration: none;">О нашей компании</a></h3>
+                    
+                    <div class="footer-contact-info">
+                        <div class="footer-contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+78172556670">+7 (8172) 55-66-70</a>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:mail@mupatp1.ru">mail@mupatp1.ru</a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-bottom-content">
+                        <div class="footer-image-container">
+                            <img src="img/win.png" alt="Победа">
+                        </div>
+                        <div class="social-links">
+                            <a href="https://vk.com/patp1vologda" target="_blank"><i class="fab fa-vk"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Основные разделы</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://mupatp1.ru/raspisanie/">Расписание</a></li>
+                        <li><a href="oplata-proezda.html">Оплата проезда</a></li>
+                        <li><a href="uslugi.html">Услуги</a></li>
+                        <li><a href="novosti.html">Новости</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Полезные ссылки</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://citybus35.ru/" target="_blank">Умный транспорт</a></li>
+                        <li><a href="rabota.html">Работа у нас</a></li>
+                        <li><a href="https://yc.mupatp1.ru/" target="_blank">Учебный центр</a></li>
+                        <li><a href="dokumenty.html">Документы</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 АО «ПАТП №1». Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автопарк - АО «ПАТП №1»</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <link href="styles/mediaqueries.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/avtopark.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+</head>
+<body>
+    <header class="header-area">
+        <div class="container-fluid">
+            <div class="header-container">
+                <div class="header-left">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="https://mupatp1.ru/assets/template/img/logo_Ptp.png" alt="Логотип ПАТП №1">
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="header-center">
+                    <div class="main-menu">
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="https://mupatp1.ru/raspisanie/" class="menu-icon">Расписание<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="submenu-mainmenu">
+                                        <li><a href="https://citybus35.ru/" target="_blank">Умный транспорт</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="oplata-proezda.html" class="menu-icon">Оплата проезда<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="submenu-mainmenu">
+                                        <li><a href="https://bilet.nspk.ru/" target="_blank">Оплата банковской картой</a></li>
+                                        <li><a href="https://t-karta.ru" target="_blank">История поездок (кабинет)</a></li>
+                                        <li><a href="pravila-asop.html">Правила АСОП</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="uslugi.html" class="menu-icon">Услуги<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="submenu-mainmenu">
+                                        <li><a href="zakaznye-perevozki.html">Заказные перевозки</a></li>
+                                        <li><a href="passazhirskie-perevozki.html">Пассажирские перевозки</a></li>
+                                        <li><a href="perevozka-detej.html">Перевозка детей</a></li>
+                                        <li><a href="texnicheskoe-obsluzhivanie.html">Техническое обслуживание</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="o-kompanii.html" class="menu-icon">О компании<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="submenu-mainmenu">
+                                        <li><a href="novosti.html">Новости</a></li>
+                                        <li><a href="kontakty.html">Контакты</a></li>
+                                        <li><a href="avtopark.html">Автопарк</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="oficialnaya-informaciya.html" class="menu-icon">Официальная информация<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="submenu-mainmenu">
+                                        <li><a href="dokumenty.html">Документы</a></li>
+                                        <li><a href="protivodejstvie-korrupcii.html">Противодействие коррупции</a></li>
+                                        <li><a href="informaciya-ot-prokuratury.html">Информация от Прокуратуры г. Вологда</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                
+                <div class="header-right">
+                    <a href="rabota.html" class="header-btn">
+                        <i class="fas fa-briefcase"></i> РАБОТА У НАС
+                    </a>
+                    
+                    <button class="navbar-toggler" id="navbarToggler">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+            <div class="mobile-menu" id="mobileMenu">
+                <div class="mobile-menu-container">
+                    <div class="mobile-menu-section">
+                        <h3 class="mobile-menu-title">Расписание</h3>
+                        <ul class="mobile-menu-links">
+                            <li><a href="https://mupatp1.ru/raspisanie/"><i class="fas fa-bus"></i> Расписание автобусов</a></li>
+                            <li><a href="https://citybus35.ru/" target="_blank" class="external-link"><i class="fas fa-map-marked-alt"></i> Умный транспорт</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mobile-menu-section">
+                        <h3 class="mobile-menu-title">Оплата проезда</h3>
+                        <ul class="mobile-menu-links">
+                            <li><a href="oplata-proezda.html"><i class="fas fa-money-bill-wave"></i> Стоимость проезда</a></li>
+                            <li><a href="https://bilet.nspk.ru/" target="_blank" class="external-link"><i class="fas fa-credit-card"></i> Оплата картой</a></li>
+                            <li><a href="https://t-karta.ru" target="_blank" class="external-link"><i class="fas fa-history"></i> История поездок</a></li>
+                            <li><a href="pravila-asop.html"><i class="fas fa-file-contract"></i> Правила АСОП</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mobile-menu-section">
+                        <h3 class="mobile-menu-title">Услуги</h3>
+                        <ul class="mobile-menu-links">
+                            <li><a href="uslugi.html"><i class="fas fa-concierge-bell"></i> Все услуги</a></li>
+                            <li><a href="zakaznye-perevozki.html"><i class="fas fa-bus-alt"></i> Заказные перевозки</a></li>
+                            <li><a href="passazhirskie-perevozki.html"><i class="fas fa-users"></i> Пассажирские перевозки</a></li>
+                            <li><a href="perevozka-detej.html"><i class="fas fa-child"></i> Перевозка детей</a></li>
+                            <li><a href="texnicheskoe-obsluzhivanie.html"><i class="fas fa-cogs"></i> Техническое обслуживание</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mobile-menu-section">
+                        <h3 class="mobile-menu-title">О компании</h3>
+                        <ul class="mobile-menu-links">
+                            <li><a href="o-kompanii.html"><i class="fas fa-building"></i> О нас</a></li>
+                            <li><a href="novosti.html"><i class="far fa-newspaper"></i> Новости</a></li>
+                            <li><a href="kontakty.html"><i class="fas fa-address-book"></i> Контакты</a></li>
+                            <li><a href="avtopark.html"><i class="fas fa-car"></i> Автопарк</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mobile-menu-section">
+                        <h3 class="mobile-menu-title">Официальная информация</h3>
+                        <ul class="mobile-menu-links">
+                            <li><a href="oficialnaya-informaciya.html"><i class="fas fa-info-circle"></i> Официальная информация</a></li>
+                            <li><a href="dokumenty.html"><i class="fas fa-file-alt"></i> Документы</a></li>
+                            <li><a href="protivodejstvie-korrupcii.html"><i class="fas fa-gavel"></i> Противодействие коррупции</a></li>
+                            <li><a href="informaciya-ot-prokuratury.html"><i class="fas fa-balance-scale"></i> Информация от Прокуратуры</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="breadcrumb-section">
+        <div class="container">
+            <h1>Автопарк</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                    <li class="breadcrumb-item"><a href="o-kompanii.html">О компании</a></li>
+                    <li class="breadcrumb-item active">Автопарк</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <section class="documents-background">
+        <div class="container">
+            <div class="documents-intro">
+                <p>Парк АО "ПАТП № 1" насчитывает порядка 150 машин как отечественного, так и зарубежного производства. Они подходят для самых разных транспортных задач. Все автобусы предприятия оборудованы кондиционерами, ремнями безопасности, тахографами и навигационной системой ГЛОНАСС, которая позволяет четко отслеживать маршрут движения автобусов и контролировать регулярность движения.</p>
+                <p>Для улучшения качества обслуживания и обеспечения транспортной доступности маломобильных граждан, предприятие приобрело ряд низкопольных автобусов, не уступающих европейским аналогам. Они оборудованы системой книлинга (наклона пола при остановке в сторону дверей), пандусами и специально отведенными местами для инвалидных колясок.</p>
+                <p>Для обеспечения высокого уровня технической готовности парка автобусов на ПАТП оборудованы участки по техническому обслуживанию и ремонту, благодаря чему значительно сокращается время простоя автобуса на ремонте.</p>
+            </div>
+
+            <div class="section-title">
+                <h2>Модели автобусов</h2>
+                <p>Современный транспортный парк АО «ПАТП №1»</p>
+            </div>
+
+            <div class="bus-models-grid">
+                <div class="bus-model-card">
+                    <div class="bus-model-icon">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <div class="bus-model-content">
+                        <h3>ЛиАЗ-5256</h3>
+                        <p>Один из самых популярных городских автобусов в России производства Ликинского завода.</p>
+                        <button class="bus-model-btn" data-bus="liaz-5256">
+                            <i class="fas fa-info-circle"></i> Подробнее
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bus-model-card">
+                    <div class="bus-model-icon">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <div class="bus-model-content">
+                        <h3>Олимп-4252</h3>
+                        <p>Модель на базе шасси КамАЗа с оптимальным соотношением стоячих мест и мест для сидения.</p>
+                        <button class="bus-model-btn" data-bus="olimp-4252">
+                            <i class="fas fa-info-circle"></i> Подробнее
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bus-model-card">
+                    <div class="bus-model-icon">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <div class="bus-model-content">
+                        <h3>Олимп-4252.1</h3>
+                        <p>Модель с увеличенным количеством мест для сидения для пригородных маршрутов.</p>
+                        <button class="bus-model-btn" data-bus="olimp-4252-1">
+                            <i class="fas fa-info-circle"></i> Подробнее
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bus-model-card">
+                    <div class="bus-model-icon">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <div class="bus-model-content">
+                        <h3>МАЗ-206067</h3>
+                        <p>Современный комфортабельный автобус из Белоруссии для городских перевозок.</p>
+                        <button class="bus-model-btn" data-bus="maz-206067">
+                            <i class="fas fa-info-circle"></i> Подробнее
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bus-model-card">
+                    <div class="bus-model-icon">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <div class="bus-model-content">
+                        <h3>ЛиАЗ-529257</h3>
+                        <p>Низкопольные автобусы на газомоторном топливе с системой книлинга.</p>
+                        <button class="bus-model-btn" data-bus="liaz-529257">
+                            <i class="fas fa-info-circle"></i> Подробнее
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bus-model-card">
+                    <div class="bus-model-icon">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <div class="bus-model-content">
+                        <h3>МАЗ 103465</h3>
+                        <p>Низкопольный автобус для организации пассажирских перевозок по городским маршрутам.</p>
+                        <button class="bus-model-btn" data-bus="maz-103465">
+                            <i class="fas fa-info-circle"></i> Подробнее
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bus-model-card">
+                    <div class="bus-model-icon">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <div class="bus-model-content">
+                        <h3>МАЗ 103565</h3>
+                        <p>Низкопольный автобус с увеличенным количеством мест для сидения.</p>
+                        <button class="bus-model-btn" data-bus="maz-103565">
+                            <i class="fas fa-info-circle"></i> Подробнее
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bus-model-card">
+                    <div class="bus-model-icon">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <div class="bus-model-content">
+                        <h3>НЕФАЗ-5299</h3>
+                        <p>Современный городской автобус для пассажирских перевозок.</p>
+                        <button class="bus-model-btn" data-bus="nefaz-5299">
+                            <i class="fas fa-info-circle"></i> Подробнее
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="passports-section">
+                <h3>Паспорта доступности транспортных средств</h3>
+                <p>Паспорта доступности транспортных средств для пассажиров из числа инвалидов:</p>
+                
+                <div class="passports-grid">
+                    <div class="passport-card">
+                        <i class="fas fa-file-pdf"></i>
+                        <h4>Паспорт 1</h4>
+                        <a href="https://mupatp1.ru/uploads/docs/liaz_5256.pdf" class="document-btn" target="_blank">Посмотреть</a>
+                    </div>
+                    
+                    <div class="passport-card">
+                        <i class="fas fa-file-pdf"></i>
+                        <h4>Паспорт 2</h4>
+                        <a href="https://mupatp1.ru/uploads/docs/maz_20606.pdf" class="document-btn" target="_blank">Посмотреть</a>
+                    </div>
+                    
+                    <div class="passport-card">
+                        <i class="fas fa-file-pdf"></i>
+                        <h4>Паспорт 3</h4>
+                        <a href="https://mupatp1.ru/uploads/docs/maz_20606.pdf" class="document-btn" target="_blank">Посмотреть</a>
+                    </div>
+                    
+                    <div class="passport-card">
+                        <i class="fas fa-file-pdf"></i>
+                        <h4>Паспорт 4</h4>
+                        <a href="https://mupatp1.ru/uploads/docs/mbt_o_345.pdf" class="document-btn" target="_blank">Посмотреть</a>
+                    </div>
+                </div>
+
+                <div class="passports-grid-bottom">
+                    <div class="passport-card">
+                        <i class="fas fa-file-pdf"></i>
+                        <h4>Паспорт 5</h4>
+                        <a href="https://mupatp1.ru/uploads/docs/nefgaz_5299...31.pdf" class="document-btn" target="_blank">Посмотреть</a>
+                    </div>
+                    
+                    <div class="passport-card">
+                        <i class="fas fa-file-pdf"></i>
+                        <h4>Паспорт 6</h4>
+                        <a href="https://mupatp1.ru/uploads/docs/olimp_4252.pdf" class="document-btn" target="_blank">Посмотреть</a>
+                    </div>
+                    
+                    <div class="passport-card">
+                        <i class="fas fa-file-pdf"></i>
+                        <h4>Паспорт 7</h4>
+                        <a href="https://mupatp1.ru/uploads/docs/sbornaya.pdf" class="document-btn" target="_blank">Посмотреть</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="modal-liaz-5256" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>ЛиАЗ-5256</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="bus-characteristics">
+                    <div class="characteristic-group">
+                        <h4>Габаритные размеры</h4>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Длина</span>
+                            <span class="characteristic-value">11,4 м</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Ширина</span>
+                            <span class="characteristic-value">2,5 м</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Высота</span>
+                            <span class="characteristic-value">3,0 м</span>
+                        </div>
+                    </div>
+                    <div class="characteristic-group">
+                        <h4>Пассажировместимость</h4>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Общая</span>
+                            <span class="characteristic-value">117 чел.</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Мест для сидения</span>
+                            <span class="characteristic-value">23</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Максимальная скорость</span>
+                            <span class="characteristic-value">100 км/ч</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Назначение</span>
+                            <span class="characteristic-value">Городской</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bus-description">
+                    <h4>Описание</h4>
+                    <p>Один из самых популярных городских автобусов в России производства Ликинского завода. В настоящее время автобусы этой марки прошли глубокую модернизацию и отвечают всем требованиям безопасности и экологии.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-olimp-4252" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Олимп-4252</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="bus-characteristics">
+                    <div class="characteristic-group">
+                        <h4>Габаритные размеры</h4>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Длина</span>
+                            <span class="characteristic-value">11,9 м</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Ширина</span>
+                            <span class="characteristic-value">2,5 м</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Высота</span>
+                            <span class="characteristic-value">3,0 м</span>
+                        </div>
+                    </div>
+                    <div class="characteristic-group">
+                        <h4>Пассажировместимость</h4>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Общая</span>
+                            <span class="characteristic-value">100 чел.</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Мест для сидения</span>
+                            <span class="characteristic-value">27</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Максимальная скорость</span>
+                            <span class="characteristic-value">70/90 км/ч</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Назначение</span>
+                            <span class="characteristic-value">Городской</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bus-description">
+                    <h4>Описание</h4>
+                    <p>Эта модель на базе шасси КамАЗа выпущена Вологодским механическим заводом. Она имеет оптимальное соотношение стоячих мест и мест для сидения.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-olimp-4252-1" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Олимп-4252.1</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="bus-characteristics">
+                    <div class="characteristic-group">
+                        <h4>Габаритные размеры</h4>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Длина</span>
+                            <span class="characteristic-value">11,9 м</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Ширина</span>
+                            <span class="characteristic-value">2,5 м</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Высота</span>
+                            <span class="characteristic-value">3,0 м</span>
+                        </div>
+                    </div>
+                    <div class="characteristic-group">
+                        <h4>Пассажировместимость</h4>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Общая</span>
+                            <span class="characteristic-value">90 чел.</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Мест для сидения</span>
+                            <span class="characteristic-value">40</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Максимальная скорость</span>
+                            <span class="characteristic-value">70/90 км/ч</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Назначение</span>
+                            <span class="characteristic-value">Пригородный</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bus-description">
+                    <h4>Описание</h4>
+                    <p>Эта модель отличается от своего собрата увеличенным количеством мест для сидения. По этой причине Олимп-4252.1 предпочтительнее использовать уже на пригородных, более протяженных маршрутах.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-maz-206067" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>МАЗ-206067</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="bus-characteristics">
+                    <div class="characteristic-group">
+                        <h4>Габаритные размеры</h4>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Длина</span>
+                            <span class="characteristic-value">8,65 м</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Ширина</span>
+                            <span class="characteristic-value">2,55 м</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Высота</span>
+                            <span class="characteristic-value">2,85 м</span>
+                        </div>
+                    </div>
+                    <div class="characteristic-group">
+                        <h4>Пассажировместимость</h4>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Общая</span>
+                            <span class="characteristic-value">72 чел.</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Мест для сидения</span>
+                            <span class="characteristic-value">25</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Максимальная скорость</span>
+                            <span class="characteristic-value">105 км/ч</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Назначение</span>
+                            <span class="characteristic-value">Городской</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bus-description">
+                    <h4>Описание</h4>
+                    <p>Современный комфортабельный автобус из Белоруссии.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-liaz-529257" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>ЛиАЗ-529257</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="bus-characteristics">
+                    <div class="characteristic-group">
+                        <h4>Габаритные размеры</h4>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Длина</span>
+                            <span class="characteristic-value">11,99 м</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Ширина</span>
+                            <span class="characteristic-value">2,50 м</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Высота</span>
+                            <span class="characteristic-value">2,93 м</span>
+                        </div>
+                    </div>
+                    <div class="characteristic-group">
+                        <h4>Пассажировместимость</h4>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Общая</span>
+                            <span class="characteristic-value">108 чел.</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Мест для сидения</span>
+                            <span class="characteristic-value">28</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Максимальная скорость</span>
+                            <span class="characteristic-value">80 км/ч</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Назначение</span>
+                            <span class="characteristic-value">Городской</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bus-description">
+                    <h4>Описание</h4>
+                    <p>Современные низкопольные автобусы на газомоторном топливе. Имеют повышенную шумоизоляцию и оборудованы системой книлинга — наклона кузова в сторону входных дверей на 7 градусов. В центральной части салона есть большая площадка, снабженную креплениями для инвалидных колясок и аппарелью.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-maz-103465" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>МАЗ 103465</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="bus-characteristics">
+                    <div class="characteristic-group">
+                        <h4>Габаритные размеры</h4>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Длина</span>
+                            <span class="characteristic-value">11,98 м</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Ширина</span>
+                            <span class="characteristic-value">2,5 м</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Высота</span>
+                            <span class="characteristic-value">2,8 м</span>
+                        </div>
+                    </div>
+                    <div class="characteristic-group">
+                        <h4>Пассажировместимость</h4>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Общая</span>
+                            <span class="characteristic-value">97 чел.</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Мест для сидения</span>
+                            <span class="characteristic-value">21</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Максимальная скорость</span>
+                            <span class="characteristic-value">80 км/ч</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Назначение</span>
+                            <span class="characteristic-value">Городской</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bus-description">
+                    <h4>Описание</h4>
+                    <p>МАЗ 103 – пассажирский низкопольный автобус: отличный вариант для организации пассажирских перевозок по городским маршрутам. Данная модель отличается удачным сочетанием преимуществ: экономичность и экологичность, обеспечиваемые современным двигателем, трансмиссией и использованием экологически чистых компонентов в процессе производства; надежность и безопасность гарантированы применением современных систем АБС, АСР и так далее; комфорт пассажиров и водителя обеспечивается продуманной эргономикой кабины и пассажирского салона, удобными сидениями, обогревателем и другими средствами.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-maz-103565" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>МАЗ 103565</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="bus-characteristics">
+                    <div class="characteristic-group">
+                        <h4>Габаритные размеры</h4>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Длина</span>
+                            <span class="characteristic-value">11,98 м</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Ширина</span>
+                            <span class="characteristic-value">2,5 м</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Высота</span>
+                            <span class="characteristic-value">2,8 м</span>
+                        </div>
+                    </div>
+                    <div class="characteristic-group">
+                        <h4>Пассажировместимость</h4>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Общая</span>
+                            <span class="characteristic-value">100 чел.</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Мест для сидения</span>
+                            <span class="characteristic-value">30</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Максимальная скорость</span>
+                            <span class="characteristic-value">80 км/ч</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Назначение</span>
+                            <span class="characteristic-value">Городской</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bus-description">
+                    <h4>Описание</h4>
+                    <p>МАЗ 103 – пассажирский низкопольный автобус: отличный вариант для организации пассажирских перевозок по городским маршрутам. Данная модель отличается удачным сочетанием преимуществ: экономичность и экологичность, обеспечиваемые современным двигателем, трансмиссией и использованием экологически чистых компонентов в процессе производства; надежность и безопасность гарантированы применением современных систем АБС, АСР и так далее; комфорт пассажиров и водителя обеспечивается продуманной эргономикой кабины и пассажирского салона, удобными сидениями, обогревателем и другими средствами.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-nefaz-5299" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>НЕФАЗ-5299</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="bus-characteristics">
+                    <div class="characteristic-group">
+                        <h4>Габаритные размеры</h4>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Длина</span>
+                            <span class="characteristic-value">11,88 м</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Ширина</span>
+                            <span class="characteristic-value">2,5 м</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Высота</span>
+                            <span class="characteristic-value">3,5 м</span>
+                        </div>
+                    </div>
+                    <div class="characteristic-group">
+                        <h4>Пассажировместимость</h4>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Общая</span>
+                            <span class="characteristic-value">105 чел.</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Мест для сидения</span>
+                            <span class="characteristic-value">25</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Максимальная скорость</span>
+                            <span class="characteristic-value">70 км/ч</span>
+                        </div>
+                        <div class="characteristic-item">
+                            <span class="characteristic-name">Назначение</span>
+                            <span class="characteristic-value">Городской</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bus-description">
+                    <h4>Описание</h4>
+                    <p>Современный городской автобус для пассажирских перевозок.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3><a href="o-kompanii.html" style="color: white; text-decoration: none;">О нашей компании</a></h3>
+                    
+                    <div class="footer-contact-info">
+                        <div class="footer-contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+78172556670">+7 (8172) 55-66-70</a>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:mail@mupatp1.ru">mail@mupatp1.ru</a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-bottom-content">
+                        <div class="footer-image-container">
+                            <img src="img/win.png" alt="Победа">
+                        </div>
+                        <div class="social-links">
+                            <a href="https://vk.com/patp1vologda" target="_blank"><i class="fab fa-vk"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Основные разделы</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://mupatp1.ru/raspisanie/">Расписание</a></li>
+                        <li><a href="oplata-proezda.html">Оплата проезда</a></li>
+                        <li><a href="uslugi.html">Услуги</a></li>
+                        <li><a href="novosti.html">Новости</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Полезные ссылки</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://citybus35.ru/" target="_blank">Умный транспорт</a></li>
+                        <li><a href="rabota.html">Работа у нас</a></li>
+                        <li><a href="https://yc.mupatp1.ru/" target="_blank">Учебный центр</a></li>
+                        <li><a href="dokumenty.html">Документы</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 АО «ПАТП №1». Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/avtopark.js"></script>
+</body>
+</html>

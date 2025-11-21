@@ -1,0 +1,145 @@
+.news-detail {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+.news-date {
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+}
+
+.news-content h3 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: var(--text-color);
+    line-height: 1.3;
+}
+
+.news-content p {
+    color: #666666;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.news-content strong {
+    color: var(--text-color);
+}
+
+.route-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 30px 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    color: var(--secondary-color);
+    transform: translateX(-5px);
+}
+
+.share-section {
+    background: var(--light-bg);
+    border-radius: 10px;
+    padding: 25px;
+    margin-top: 40px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.share-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.share-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.share-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.share-btn.vk {
+    background-color: #4a76a8;
+    color: white;
+}
+
+.share-btn.vk:hover {
+    background-color: #3a6690;
+    transform: translateY(-2px);
+}
+
+.share-btn.odnoklassniki {
+    background-color: #ee8208;
+    color: white;
+}
+
+.share-btn.odnoklassniki:hover {
+    background-color: #d67307;
+    transform: translateY(-2px);
+}
+
+.share-btn.copy {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.share-btn.copy:hover {
+    background-color: #2a5cd6;
+    transform: translateY(-2px);
+}
+
+.copy-notification {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    background: var(--primary-color);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 10000;
+    transform: translateX(120%);
+    transition: transform 0.3s ease;
+}
+
+.copy-notification.show {
+    transform: translateX(0);
+}

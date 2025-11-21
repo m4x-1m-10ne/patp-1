@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Перевозка детей - АО «ПАТП №1»</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <link href="styles/mediaqueries.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/perevozka-detej.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+</head>
+<body>
+    <header class="header-area">
+        <div class="container-fluid">
+            <div class="header-container">
+                <div class="header-left">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="https://mupatp1.ru/assets/template/img/logo_Ptp.png" alt="Логотип ПАТП №1">
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="header-center">
+                    <div class="main-menu">
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="https://mupatp1.ru/raspisanie/" class="menu-icon">Расписание<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="submenu-mainmenu">
+                                        <li><a href="https://citybus35.ru/" target="_blank">Умный транспорт</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="oplata-proezda.html" class="menu-icon">Оплата проезда<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="submenu-mainmenu">
+                                        <li><a href="https://bilet.nspk.ru/" target="_blank">Оплата банковской картой</a></li>
+                                        <li><a href="https://t-karta.ru" target="_blank">История поездок (кабинет)</a></li>
+                                        <li><a href="pravila-asop.html">Правила АСОП</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="uslugi.html" class="menu-icon">Услуги<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="submenu-mainmenu">
+                                        <li><a href="zakaznye-perevozki.html">Заказные перевозки</a></li>
+                                        <li><a href="passazhirskie-perevozki.html">Пассажирские перевозки</a></li>
+                                        <li><a href="perevozka-detej.html">Перевозка детей</a></li>
+                                        <li><a href="texnicheskoe-obsluzhivanie.html">Техническое обслуживание</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="o-kompanii.html" class="menu-icon">О компании<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="submenu-mainmenu">
+                                        <li><a href="novosti.html">Новости</a></li>
+                                        <li><a href="kontakty.html">Контакты</a></li>
+                                        <li><a href="avtopark.html">Автопарк</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="oficialnaya-informaciya.html" class="menu-icon">Официальная информация<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="submenu-mainmenu">
+                                        <li><a href="dokumenty.html">Документы</a></li>
+                                        <li><a href="protivodejstvie-korrupcii.html">Противодействие коррупции</a></li>
+                                        <li><a href="informaciya-ot-prokuratury.html">Информация от Прокуратуры г. Вологда</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                
+                <div class="header-right">
+                    <a href="rabota.html" class="header-btn">
+                        <i class="fas fa-briefcase"></i> РАБОТА У НАС
+                    </a>
+                    
+                    <button class="navbar-toggler" id="navbarToggler">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+            <div class="mobile-menu" id="mobileMenu">
+                <div class="mobile-menu-container">
+                    <div class="mobile-menu-section">
+                        <h3 class="mobile-menu-title">Расписание</h3>
+                        <ul class="mobile-menu-links">
+                            <li><a href="https://mupatp1.ru/raspisanie/"><i class="fas fa-bus"></i> Расписание автобусов</a></li>
+                            <li><a href="https://citybus35.ru/" target="_blank" class="external-link"><i class="fas fa-map-marked-alt"></i> Умный транспорт</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mobile-menu-section">
+                        <h3 class="mobile-menu-title">Оплата проезда</h3>
+                        <ul class="mobile-menu-links">
+                            <li><a href="oplata-proezda.html"><i class="fas fa-money-bill-wave"></i> Стоимость проезда</a></li>
+                            <li><a href="https://bilet.nspk.ru/" target="_blank" class="external-link"><i class="fas fa-credit-card"></i> Оплата картой</a></li>
+                            <li><a href="https://t-karta.ru" target="_blank" class="external-link"><i class="fas fa-history"></i> История поездок</a></li>
+                            <li><a href="pravila-asop.html"><i class="fas fa-file-contract"></i> Правила АСОП</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mobile-menu-section">
+                        <h3 class="mobile-menu-title">Услуги</h3>
+                        <ul class="mobile-menu-links">
+                            <li><a href="uslugi.html"><i class="fas fa-concierge-bell"></i> Все услуги</a></li>
+                            <li><a href="zakaznye-perevozki.html"><i class="fas fa-bus-alt"></i> Заказные перевозки</a></li>
+                            <li><a href="passazhirskie-perevozki.html"><i class="fas fa-users"></i> Пассажирские перевозки</a></li>
+                            <li><a href="perevozka-detej.html"><i class="fas fa-child"></i> Перевозка детей</a></li>
+                            <li><a href="texnicheskoe-obsluzhivanie.html"><i class="fas fa-cogs"></i> Техническое обслуживание</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mobile-menu-section">
+                        <h3 class="mobile-menu-title">О компании</h3>
+                        <ul class="mobile-menu-links">
+                            <li><a href="o-kompanii.html"><i class="fas fa-building"></i> О нас</a></li>
+                            <li><a href="novosti.html"><i class="far fa-newspaper"></i> Новости</a></li>
+                            <li><a href="kontakty.html"><i class="fas fa-address-book"></i> Контакты</a></li>
+                            <li><a href="avtopark.html"><i class="fas fa-car"></i> Автопарк</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mobile-menu-section">
+                        <h3 class="mobile-menu-title">Официальная информация</h3>
+                        <ul class="mobile-menu-links">
+                            <li><a href="oficialnaya-informaciya.html"><i class="fas fa-info-circle"></i> Официальная информация</a></li>
+                            <li><a href="dokumenty.html"><i class="fas fa-file-alt"></i> Документы</a></li>
+                            <li><a href="protivodejstvie-korrupcii.html"><i class="fas fa-gavel"></i> Противодействие коррупции</a></li>
+                            <li><a href="informaciya-ot-prokuratury.html"><i class="fas fa-balance-scale"></i> Информация от Прокуратуры</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="breadcrumb-section">
+        <div class="container">
+            <h1>Перевозка детей</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                    <li class="breadcrumb-item"><a href="uslugi.html">Услуги</a></li>
+                    <li class="breadcrumb-item active">Перевозка детей</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="info-section">
+                <h3>Информация о перевозках детей</h3>
+                <p>Перевозка организованных групп детей - это очень сложное и ответственное дело. Заниматься этим может только лицензированная транспортная компания. У ПАТП № 1 нужная лицензия есть. Кроме того, все автобусы ПАТП № 1 для перевозки детей оборудованы ремнями безопасности, тахографами, системой ГЛОНАСС, противооткатными упорами, огнетушителями, аптечками, предупреждающими табличками, а также проходят проверку технического состояния и комплектации перед каждым выездом.</p>
+            </div>
+
+            <div class="documents-grid">
+                <div class="document-card">
+                    <div class="document-content">
+                        <div class="document-icon">
+                            <i class="fas fa-file-word"></i>
+                        </div>
+                        <h3>Памятка организаторам перевозок</h3>
+                        <p>Основные правила и требования для организаторов детских перевозок</p>
+                        <div class="document-meta">
+                            <div class="document-date">
+                                <i class="far fa-calendar-alt"></i> Актуально
+                            </div>
+                            <a href="https://mupatp1.ru/uploads/docs/pamyatka_organizatoram_perevozok.doc" class="document-btn" target="_blank">
+                                <i class="fas fa-eye"></i> Посмотреть
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="document-card">
+                    <div class="document-content">
+                        <div class="document-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <h3>Пошаговая инструкция</h3>
+                        <p>Подробное руководство по организации перевозки детей</p>
+                        <div class="document-meta">
+                            <div class="document-date">
+                                <i class="far fa-calendar-alt"></i> Актуально
+                            </div>
+                            <a href="https://mupatp1.ru/uploads/docs/poshagovaya_instrukciya.pdf" class="document-btn" target="_blank">
+                                <i class="fas fa-eye"></i> Посмотреть
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="document-card">
+                    <div class="document-content">
+                        <div class="document-icon">
+                            <i class="fas fa-file-word"></i>
+                        </div>
+                        <h3>Форма заявки</h3>
+                        <p>Бланк для подачи заявления на перевозку детей</p>
+                        <div class="document-meta">
+                            <div class="document-date">
+                                <i class="far fa-calendar-alt"></i> Актуально
+                            </div>
+                            <a href="https://mupatp1.ru/uploads/docs/zayavka.doc" class="document-btn" target="_blank">
+                                <i class="fas fa-eye"></i> Посмотреть
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="document-card">
+                    <div class="document-content">
+                        <div class="document-icon">
+                            <i class="fas fa-file-word"></i>
+                        </div>
+                        <h3>Уведомление ГИБДД</h3>
+                        <p>Форма для уведомления Госавтоинспекции о перевозке детей</p>
+                        <div class="document-meta">
+                            <div class="document-date">
+                                <i class="far fa-calendar-alt"></i> Актуально
+                            </div>
+                            <a href="https://mupatp1.ru/uploads/docs/forma-gibdd.doc" class="document-btn" target="_blank">
+                                <i class="fas fa-eye"></i> Посмотреть
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="document-card">
+                    <div class="document-content">
+                        <div class="document-icon">
+                            <i class="fas fa-file-word"></i>
+                        </div>
+                        <h3>Контактная информация</h3>
+                        <p>Контактные данные ответственных лиц для согласования перевозок</p>
+                        <div class="document-meta">
+                            <div class="document-date">
+                                <i class="far fa-calendar-alt"></i> Актуально
+                            </div>
+                            <a href="https://mupatp1.ru/uploads/docs/kontaktnaya_informaciya.doc" class="document-btn" target="_blank">
+                                <i class="fas fa-eye"></i> Посмотреть
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-info">
+                <h3>Контактная информация ГИБДД</h3>
+                <p>Для подачи заявки на согласование перевозки организованных групп детей автобусами по территории Вологодской области и за пределы региона (согласно постановлению Правительства РФ № 1177 - 2013)</p>
+                
+                <div class="contact-item">
+                    <i class="fas fa-building"></i>
+                    <span>УГИБДД УМВД России по Вологодской области</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>Электронная почта: <a href="mailto:35@gibdd.ru">35@gibdd.ru</a></span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>Телефон/факс: <a href="tel:+78172540604">+7 (8172) 54-06-04</a> или <a href="tel:765023">76-50-23</a></span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>Дополнительные телефоны: <a href="tel:+78172765036">76-50-36</a> (ДПС), <a href="tel:765042">76-50-42</a> (технадзор), <a href="tel:765003">76-50-03</a> (канцелярия)</span>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h3>Правовая информация</h3>
+                <p>ПАТП №1 информирует о принятии Правительством Российской Федерации постановления от 30 июня 2015 года № 652 <a href="https://mupatp1.ru/uploads/docs/postanovlenie_no652.pdf" target="_blank">«О внесении изменений в некоторые акты Правительства Российской Федерации в части совершенствования правил организованной перевозки группы детей автобусами».</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="process-section">
+        <div class="container">
+            <div class="process-intro">
+                <h2>Процедура перевозки детей</h2>
+                <p>Для организации детской перевозки требуется совершить ряд обязательных по закону шагов. Мы разработали простую и понятную схему, которая поможет вам организовать безопасную поездку для детей.</p>
+            </div>
+            
+            <div class="process-container">
+                <div class="process-road animated"></div>
+                
+                <div class="process-steps-wrapper">
+                    <div class="process-step-card" data-step="1">
+                        <div class="step-number">1</div>
+                        <div class="step-icon">
+                            <i class="fas fa-file-contract"></i>
+                        </div>
+                        <h3>Договор</h3>
+                        <p>Заключение договора фрахтования</p>
+                        
+                        <div class="step-details-desktop">
+                            <h4>Что включает этот этап:</h4>
+                            <ul>
+                                <li>Определение условий перевозки</li>
+                                <li>Согласование маршрута и графика</li>
+                                <li>Установление прав и обязанностей сторон</li>
+                                <li>Определение стоимости услуг</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step-card" data-step="2">
+                        <div class="step-number">2</div>
+                        <div class="step-icon">
+                            <i class="fas fa-folder-open"></i>
+                        </div>
+                        <h3>Подготовка документов</h3>
+                        <p>Сбор необходимых документов</p>
+                        
+                        <div class="step-details-desktop">
+                            <h4>Необходимые документы:</h4>
+                            <ul>
+                                <li>Списки детей и сопровождающих</li>
+                                <li>График движения</li>
+                                <li>Схема маршрута</li>
+                                <li>Сведения о водителях</li>
+                                <li>Документы о медицинском сопровождении (при необходимости)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step-card" data-step="3">
+                        <div class="step-number">3</div>
+                        <div class="step-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Согласование с ГИБДД</h3>
+                        <p>Подача заявки на сопровождение</p>
+                        
+                        <div class="step-details-desktop">
+                            <h4>Важные моменты:</h4>
+                            <ul>
+                                <li>Заявка подается не менее чем за 10 дней до поездки</li>
+                                <li>Предоставляется полный пакет документов</li>
+                                <li>Согласовывается маршрут и время движения</li>
+                                <li>Получается разрешение на перевозку</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step-card" data-step="4">
+                        <div class="step-number">4</div>
+                        <div class="step-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>Принятие решения ГИБДД</h3>
+                        <p>Проверка и одобрение перевозки</p>
+                        
+                        <div class="step-details-desktop">
+                            <h4>Что проверяет ГИБДД:</h4>
+                            <ul>
+                                <li>Квалификацию водителей</li>
+                                <li>Техническое состояние автобуса</li>
+                                <li>Соответствие графика движения нормам</li>
+                                <li>Соблюдение режима труда и отдыха водителей</li>
+                                <li>Наличие необходимого оборудования</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step-card" data-step="5">
+                        <div class="step-number">5</div>
+                        <div class="step-icon">
+                            <i class="fas fa-bus"></i>
+                        </div>
+                        <h3>Перевозка</h3>
+                        <p>Осуществление поездки</p>
+                        
+                        <div class="step-details-desktop">
+                            <h4>Требования к перевозке:</h4>
+                            <ul>
+                                <li>Скорость не более 60 км/ч вне населенных пунктов</li>
+                                <li>Наличие сопровождающих (1 на каждые 20 детей)</li>
+                                <li>Соблюдение графика движения</li>
+                                <li>Наличие аптечки и средств безопасности</li>
+                                <li>Соблюдение специальных правил для ночных перевозок</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="process-note">
+                    <p><strong>Важно:</strong> Для организации перевозки детей требуется строгое соблюдение всех этапов процедуры. Наши специалисты готовы помочь вам на каждом этапе и обеспечить полное соответствие законодательным требованиям.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="step-modal" id="stepModal">
+        <div class="step-modal-content">
+            <button class="step-modal-close" id="stepModalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="step-modal-header">
+                <div class="step-modal-number" id="modalNumber">1</div>
+                <div class="step-modal-icon" id="modalIcon">
+                    <i class="fas fa-file-contract"></i>
+                </div>
+                <h3 class="step-modal-title" id="modalTitle">Договор</h3>
+            </div>
+            <div class="step-modal-body" id="modalBody">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3><a href="o-kompanii.html" style="color: white; text-decoration: none;">О нашей компании</a></h3>
+                    
+                    <div class="footer-contact-info">
+                        <div class="footer-contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+78172556670">+7 (8172) 55-66-70</a>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:mail@mupatp1.ru">mail@mupatp1.ru</a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-bottom-content">
+                        <div class="footer-image-container">
+                            <img src="img/win.png" alt="Победа">
+                        </div>
+                        <div class="social-links">
+                            <a href="https://vk.com/patp1vologda" target="_blank"><i class="fab fa-vk"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Основные разделы</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://mupatp1.ru/raspisanie/">Расписание</a></li>
+                        <li><a href="oplata-proezda.html">Оплата проезда</a></li>
+                        <li><a href="uslugi.html">Услуги</a></li>
+                        <li><a href="novosti.html">Новости</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Полезные ссылки</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://citybus35.ru/" target="_blank">Умный транспорт</a></li>
+                        <li><a href="rabota.html">Работа у нас</a></li>
+                        <li><a href="https://yc.mupatp1.ru/" target="_blank">Учебный центр</a></li>
+                        <li><a href="dokumenty.html">Документы</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 АО «ПАТП №1». Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/perevozka-detej.js"></script>
+</body>
+</html>

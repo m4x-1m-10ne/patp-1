@@ -1,0 +1,91 @@
+.info-section {
+    background-color: #f1f5f9;
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.info-section h3 {
+    color: var(--text-color);
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.info-section p {
+    color: #666666;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.info-section a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.info-section a:hover {
+    color: #2a5cd6;
+    text-decoration: underline;
+}
+
+.insurance-section {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin: 40px 0;
+    line-height: 1.8;
+}
+
+.insurance-section h3 {
+    color: var(--text-color);
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.insurance-info {
+    margin-bottom: 25px;
+}
+
+.insurance-info p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #555;
+}
+
+.insurance-info ul {
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+
+.insurance-info li {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #555;
+}
+
+.insurance-contracts {
+    margin-top: 25px;
+}
+
+.insurance-contracts h4 {
+    color: var(--text-color);
+    margin-bottom: 15px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.insurance-contract {
+    background: var(--light-bg);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.insurance-contract p {
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #555;
+}

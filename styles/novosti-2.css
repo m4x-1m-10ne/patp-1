@@ -1,0 +1,128 @@
+.breadcrumb-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/novosti.jpg');
+    color: white;
+    padding: 60px 0 40px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.news-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.news-img {
+    height: 200px;
+    background-color: #eeeeee;
+    background-size: cover;
+    background-position: center;
+}
+
+.news-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.news-date {
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.news-content h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.news-content p {
+    color: #666666;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.news-card.inactive {
+    opacity: 0.7;
+}
+
+.news-card.inactive .btn {
+    background-color: #9e9e9e;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.news-card.inactive .btn:hover {
+    background-color: #9e9e9e;
+    transform: none;
+    box-shadow: none;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.pagination ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 5px;
+}
+
+.pagination li {
+    margin: 0;
+}
+
+.pagination a, .pagination span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.pagination a {
+    color: #333;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+}
+
+.pagination a:hover {
+    background-color: #f0f0f0;
+    border-color: #d0d0d0;
+}
+
+.pagination .current {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+

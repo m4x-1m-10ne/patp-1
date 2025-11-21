@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заказные перевозки - АО «ПАТП №1»</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <link href="styles/mediaqueries.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/zakaznye-perevozki.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+</head>
+<body>
+    <header class="header-area">
+        <div class="container-fluid">
+            <div class="header-container">
+                <div class="header-left">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="https://mupatp1.ru/assets/template/img/logo_Ptp.png" alt="Логотип ПАТП №1">
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="header-center">
+                    <div class="main-menu">
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="https://mupatp1.ru/raspisanie/" class="menu-icon">Расписание<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="submenu-mainmenu">
+                                        <li><a href="https://citybus35.ru/" target="_blank">Умный транспорт</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="oplata-proezda.html" class="menu-icon">Оплата проезда<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="submenu-mainmenu">
+                                        <li><a href="https://bilet.nspk.ru/" target="_blank">Оплата банковской картой</a></li>
+                                        <li><a href="https://t-karta.ru" target="_blank">История поездок (кабинет)</a></li>
+                                        <li><a href="pravila-asop.html">Правила АСОП</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="uslugi.html" class="menu-icon">Услуги<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="submenu-mainmenu">
+                                        <li><a href="zakaznye-perevozki.html">Заказные перевозки</a></li>
+                                        <li><a href="passazhirskie-perevozki.html">Пассажирские перевозки</a></li>
+                                        <li><a href="perevozka-detej.html">Перевозка детей</a></li>
+                                        <li><a href="texnicheskoe-obsluzhivanie.html">Техническое обслуживание</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="o-kompanii.html" class="menu-icon">О компании<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="submenu-mainmenu">
+                                        <li><a href="novosti.html">Новости</a></li>
+                                        <li><a href="kontakty.html">Контакты</a></li>
+                                        <li><a href="avtopark.html">Автопарк</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="oficialnaya-informaciya.html" class="menu-icon">Официальная информация<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="submenu-mainmenu">
+                                        <li><a href="dokumenty.html">Документы</a></li>
+                                        <li><a href="protivodejstvie-korrupcii.html">Противодействие коррупции</a></li>
+                                        <li><a href="informaciya-ot-prokuratury.html">Информация от Прокуратуры г. Вологда</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                
+                <div class="header-right">
+                    <a href="rabota.html" class="header-btn">
+                        <i class="fas fa-briefcase"></i> РАБОТА У НАС
+                    </a>
+                    
+                    <button class="navbar-toggler" id="navbarToggler">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+            <div class="mobile-menu" id="mobileMenu">
+                <div class="mobile-menu-container">
+                    <div class="mobile-menu-section">
+                        <h3 class="mobile-menu-title">Расписание</h3>
+                        <ul class="mobile-menu-links">
+                            <li><a href="https://mupatp1.ru/raspisanie/"><i class="fas fa-bus"></i> Расписание автобусов</a></li>
+                            <li><a href="https://citybus35.ru/" target="_blank" class="external-link"><i class="fas fa-map-marked-alt"></i> Умный транспорт</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mobile-menu-section">
+                        <h3 class="mobile-menu-title">Оплата проезда</h3>
+                        <ul class="mobile-menu-links">
+                            <li><a href="oplata-proezda.html"><i class="fas fa-money-bill-wave"></i> Стоимость проезда</a></li>
+                            <li><a href="https://bilet.nspk.ru/" target="_blank" class="external-link"><i class="fas fa-credit-card"></i> Оплата картой</a></li>
+                            <li><a href="https://t-karta.ru" target="_blank" class="external-link"><i class="fas fa-history"></i> История поездок</a></li>
+                            <li><a href="pravila-asop.html"><i class="fas fa-file-contract"></i> Правила АСОП</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mobile-menu-section">
+                        <h3 class="mobile-menu-title">Услуги</h3>
+                        <ul class="mobile-menu-links">
+                            <li><a href="uslugi.html"><i class="fas fa-concierge-bell"></i> Все услуги</a></li>
+                            <li><a href="zakaznye-perevozki.html"><i class="fas fa-bus-alt"></i> Заказные перевозки</a></li>
+                            <li><a href="passazhirskie-perevozki.html"><i class="fas fa-users"></i> Пассажирские перевозки</a></li>
+                            <li><a href="perevozka-detej.html"><i class="fas fa-child"></i> Перевозка детей</a></li>
+                            <li><a href="texnicheskoe-obsluzhivanie.html"><i class="fas fa-cogs"></i> Техническое обслуживание</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mobile-menu-section">
+                        <h3 class="mobile-menu-title">О компании</h3>
+                        <ul class="mobile-menu-links">
+                            <li><a href="o-kompanii.html"><i class="fas fa-building"></i> О нас</a></li>
+                            <li><a href="novosti.html"><i class="far fa-newspaper"></i> Новости</a></li>
+                            <li><a href="kontakty.html"><i class="fas fa-address-book"></i> Контакты</a></li>
+                            <li><a href="avtopark.html"><i class="fas fa-car"></i> Автопарк</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mobile-menu-section">
+                        <h3 class="mobile-menu-title">Официальная информация</h3>
+                        <ul class="mobile-menu-links">
+                            <li><a href="oficialnaya-informaciya.html"><i class="fas fa-info-circle"></i> Официальная информация</a></li>
+                            <li><a href="dokumenty.html"><i class="fas fa-file-alt"></i> Документы</a></li>
+                            <li><a href="protivodejstvie-korrupcii.html"><i class="fas fa-gavel"></i> Противодействие коррупции</a></li>
+                            <li><a href="informaciya-ot-prokuratury.html"><i class="fas fa-balance-scale"></i> Информация от Прокуратуры</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="breadcrumb-section">
+        <div class="breadcrumb-image"></div>
+        <div class="container">
+            <div class="breadcrumb-content">
+                <h1>Заказные перевозки</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                        <li class="breadcrumb-item"><a href="uslugi.html">Услуги</a></li>
+                        <li class="breadcrumb-item active">Заказные перевозки</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="services-intro">
+                <p>Заказные перевозки - одна из самых популярных услуг, предлагаемая ПАТП № 1. На нашем предприятии вы можете арендовать автобус для самых разных целей.</p>
+                <p>Аренда транспорта в ПАТП № 1 выгодна по нескольким причинам:</p>
+                <ul>
+                    <li>гибкие цены;</li>
+                    <li>индивидуальный подход;</li>
+                    <li>автобусы различной вместимости и комфортности;</li>
+                    <li>страховка пассажиров;</li>
+                    <li>опытные водители-профессионалы;</li>
+                    <li>всегда исправная техника.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Наши услуги заказных перевозок</h2>
+                <p>Выберите подходящий вариант для ваших нужд</p>
+            </div>
+
+            <div class="service-detail">
+                <div class="service-card-modern">
+                    <div class="service-header">
+                        <h2>Доставка работников</h2>
+                    </div>
+                    <div class="service-content-modern">
+                        <div class="service-image-modern" style="background-image: url('https://mupatp1.ru/assets/components/phpthumbof/cache/DSC05801-min.c306465cff6e8d38afb50bf1f45bd7085.jpg')">
+                            <div class="service-image-overlay"></div>
+                        </div>
+                        <div class="service-form-modern">
+                            <div class="service-description">
+                                <p>Служебный автобус - настоящее спасение для организаций, расположенных за городом и в неудобных местах, или для сотрудников, чьи смены не попадают в часы работы общественного транспорта (например, ночные).</p>
+                                <p><strong>Преимущества:</strong> гибкий график, надежность, комфорт для сотрудников.</p>
+                            </div>
+                            <form id="form1" class="validation-form-modern">
+                                <div class="form-group-modern">
+                                    <label class="form-label" for="fio1">ФИО *</label>
+                                    <input class="form-control-modern" id="fio1" name="fio" placeholder="Иванов Иван Иванович" type="text" data-validate="name" required>
+                                    <i class="fas fa-user form-icon"></i>
+                                    <div class="error-message-modern" id="fio-error1">Пожалуйста, введите корректное ФИО (только буквы и пробелы, от 2 до 50 символов)</div>
+                                </div>
+                                <div class="form-group-modern">
+                                    <label class="form-label" for="phone1">Телефон *</label>
+                                    <input class="form-control-modern" id="phone1" name="phone" placeholder="+7 (999) 123-45-67" type="text" data-validate="phone" required>
+                                    <i class="fas fa-phone form-icon"></i>
+                                    <div class="error-message-modern" id="phone-error1">Пожалуйста, введите корректный номер телефона</div>
+                                </div>
+                                <div class="form-group-modern">
+                                    <label class="form-label" for="email1">E-mail *</label>
+                                    <input class="form-control-modern" id="email1" name="email" placeholder="example@mail.ru" type="text" data-validate="email" required>
+                                    <i class="fas fa-envelope form-icon"></i>
+                                    <div class="error-message-modern" id="email-error1">Пожалуйста, введите корректный email адрес</div>
+                                </div>
+                                <div class="form-group-modern">
+                                    <label class="form-label" for="organization1">Организация</label>
+                                    <input class="form-control-modern" id="organization1" name="organization" placeholder="Название вашей организации" type="text">
+                                    <i class="fas fa-building form-icon"></i>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" required id="privacyCheck1">
+                                    <label class="form-check-label" for="privacyCheck1">
+                                        Соглашаюсь c условиями <a href="https://mupatp1.ru/uploads/mupatp_politic.pdf" target="_blank">политики конфиденциальности и обработки персональных данных</a> *
+                                    </label>
+                                </div>
+                                <div class="checkbox-error-modern" id="agree-error1">Необходимо ваше согласие с условиями</div>
+                                <button class="submit-modern" type="submit">
+                                    <span class="submit-text">Отправить заявку</span>
+                                    <span class="submit-loading">
+                                        <div class="spinner"></div>
+                                        Отправка...
+                                    </span>
+                                </button>
+                                <div class="success-message-modern" id="success1">
+                                    <div class="success-icon">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <h4>Спасибо за вашу заявку!</h4>
+                                    <p>Мы свяжемся с вами в течение 15 минут для уточнения деталей.</p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card-modern">
+                    <div class="service-header">
+                        <h2>Аренда автобуса на свадьбу</h2>
+                    </div>
+                    <div class="service-content-modern">
+                        <div class="service-image-modern" style="background-image: url('https://mupatp1.ru/assets/components/phpthumbof/cache/DSC05814-min.c306465cff6e8d38afb50bf1f45bd7085.jpg')">
+                            <div class="service-image-overlay"></div>
+                        </div>
+                        <div class="service-form-modern">
+                            <div class="service-description">
+                                <p>Широкому торжеству не обойтись без хорошей транспортной поддержки. Автобус станет идеальным вариантом для перевозки множества гостей.</p>
+                                <p><strong>Особенности:</strong> праздничный декор, комфортабельные салоны, профессиональные водители.</p>
+                            </div>
+                            <form id="form2" class="validation-form-modern">
+                                <div class="form-group-modern">
+                                    <label class="form-label" for="fio2">ФИО *</label>
+                                    <input class="form-control-modern" id="fio2" name="fio" placeholder="Иванов Иван Иванович" type="text" data-validate="name" required>
+                                    <i class="fas fa-user form-icon"></i>
+                                    <div class="error-message-modern" id="fio-error2">Пожалуйста, введите корректное ФИО (только буквы и пробелы, от 2 до 50 символов)</div>
+                                </div>
+                                <div class="form-group-modern">
+                                    <label class="form-label" for="phone2">Телефон *</label>
+                                    <input class="form-control-modern" id="phone2" name="phone" placeholder="+7 (999) 123-45-67" type="text" data-validate="phone" required>
+                                    <i class="fas fa-phone form-icon"></i>
+                                    <div class="error-message-modern" id="phone-error2">Пожалуйста, введите корректный номер телефона</div>
+                                </div>
+                                <div class="form-group-modern">
+                                    <label class="form-label" for="email2">E-mail *</label>
+                                    <input class="form-control-modern" id="email2" name="email" placeholder="example@mail.ru" type="text" data-validate="email" required>
+                                    <i class="fas fa-envelope form-icon"></i>
+                                    <div class="error-message-modern" id="email-error2">Пожалуйста, введите корректный email адрес</div>
+                                </div>
+                                <div class="form-group-modern">
+                                    <label class="form-label" for="date2">Дата мероприятия</label>
+                                    <input class="form-control-modern" id="date2" name="date" placeholder="дд.мм.гггг" type="text" data-validate="date">
+                                    <i class="fas fa-calendar form-icon"></i>
+                                    <div class="error-message-modern" id="date-error2">Пожалуйста, введите дату в формате дд.мм.гггг</div>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" required id="privacyCheck2">
+                                    <label class="form-check-label" for="privacyCheck2">
+                                        Соглашаюсь c условиями <a href="https://mupatp1.ru/uploads/mupatp_politic.pdf" target="_blank">политики конфиденциальности и обработки персональных данных</a> *
+                                    </label>
+                                </div>
+                                <div class="checkbox-error-modern" id="agree-error2">Необходимо ваше согласие с условиями</div>
+                                <button class="submit-modern" type="submit">
+                                    <span class="submit-text">Отправить заявку</span>
+                                    <span class="submit-loading">
+                                        <div class="spinner"></div>
+                                        Отправка...
+                                    </span>
+                                </button>
+                                <div class="success-message-modern" id="success2">
+                                    <div class="success-icon">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <h4>Спасибо за вашу заявку!</h4>
+                                    <p>Мы свяжемся с вами в течение 15 минут для уточнения деталей.</p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card-modern">
+                    <div class="service-header">
+                        <h2>Перевозка к местам проведения корпоративного отдыха</h2>
+                    </div>
+                    <div class="service-content-modern">
+                        <div class="service-image-modern" style="background-image: url('https://mupatp1.ru/assets/components/phpthumbof/cache/DSC05794-min.c306465cff6e8d38afb50bf1f45bd7085.jpg')">
+                            <div class="service-image-overlay"></div>
+                        </div>
+                        <div class="service-form-modern">
+                            <div class="service-description">
+                                <p>Это незаменимая услуга для компаний, которые любят проводить выездные корпоративы. Это удобно и выгодно, ведь при выезде, например, на природу автобус можно загрузить не только людьми.</p>
+                                <p><strong>Преимущества:</strong> вместительность, возможность перевозки оборудования, комфорт для сотрудников.</p>
+                            </div>
+                            <form id="form3" class="validation-form-modern">
+                                <div class="form-group-modern">
+                                    <label class="form-label" for="fio3">ФИО *</label>
+                                    <input class="form-control-modern" id="fio3" name="fio" placeholder="Иванов Иван Иванович" type="text" data-validate="name" required>
+                                    <i class="fas fa-user form-icon"></i>
+                                    <div class="error-message-modern" id="fio-error3">Пожалуйста, введите корректное ФИО (только буквы и пробелы, от 2 до 50 символов)</div>
+                                </div>
+                                <div class="form-group-modern">
+                                    <label class="form-label" for="phone3">Телефон *</label>
+                                    <input class="form-control-modern" id="phone3" name="phone" placeholder="+7 (999) 123-45-67" type="text" data-validate="phone" required>
+                                    <i class="fas fa-phone form-icon"></i>
+                                    <div class="error-message-modern" id="phone-error3">Пожалуйста, введите корректный номер телефона</div>
+                                </div>
+                                <div class="form-group-modern">
+                                    <label class="form-label" for="email3">E-mail *</label>
+                                    <input class="form-control-modern" id="email3" name="email" placeholder="example@mail.ru" type="text" data-validate="email" required>
+                                    <i class="fas fa-envelope form-icon"></i>
+                                    <div class="error-message-modern" id="email-error3">Пожалуйста, введите корректный email адрес</div>
+                                </div>
+                                <div class="form-group-modern">
+                                    <label class="form-label" for="organization3">Организация</label>
+                                    <input class="form-control-modern" id="organization3" name="organization" placeholder="Название вашей организации" type="text">
+                                    <i class="fas fa-building form-icon"></i>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" required id="privacyCheck3">
+                                    <label class="form-check-label" for="privacyCheck3">
+                                        Соглашаюсь c условиями <a href="https://mupatp1.ru/uploads/mupatp_politic.pdf" target="_blank">политики конфиденциальности и обработки персональных данных</a> *
+                                    </label>
+                                </div>
+                                <div class="checkbox-error-modern" id="agree-error3">Необходимо ваше согласие с условиями</div>
+                                <button class="submit-modern" type="submit">
+                                    <span class="submit-text">Отправить заявку</span>
+                                    <span class="submit-loading">
+                                        <div class="spinner"></div>
+                                        Отправка...
+                                    </span>
+                                </button>
+                                <div class="success-message-modern" id="success3">
+                                    <div class="success-icon">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <h4>Спасибо за вашу заявку!</h4>
+                                    <p>Мы свяжемся с вами в течение 15 минут для уточнения деталей.</p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3><a href="o-kompanii.html" style="color: white; text-decoration: none;">О нашей компании</a></h3>
+                    
+                    <div class="footer-contact-info">
+                        <div class="footer-contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+78172556670">+7 (8172) 55-66-70</a>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:mail@mupatp1.ru">mail@mupatp1.ru</a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-bottom-content">
+                        <div class="footer-image-container">
+                            <img src="img/win.png" alt="Победа">
+                        </div>
+                        <div class="social-links">
+                            <a href="https://vk.com/patp1vologda" target="_blank"><i class="fab fa-vk"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Основные разделы</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://mupatp1.ru/raspisanie/">Расписание</a></li>
+                        <li><a href="oplata-proezda.html">Оплата проезда</a></li>
+                        <li><a href="uslugi.html">Услуги</a></li>
+                        <li><a href="novosti.html">Новости</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Полезные ссылки</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://citybus35.ru/" target="_blank">Умный транспорт</a></li>
+                        <li><a href="rabota.html">Работа у нас</a></li>
+                        <li><a href="https://yc.mupatp1.ru/" target="_blank">Учебный центр</a></li>
+                        <li><a href="dokumenty.html">Документы</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 АО «ПАТП №1». Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <div class="validation-modal" id="validationModal">
+        <div class="validation-modal-content">
+            <div class="error-count-badge" id="errorCount">0</div>
+            <div class="validation-modal-header">
+                <div class="validation-modal-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <h3 class="validation-modal-title">Ошибка заполнения формы</h3>
+            </div>
+            <div class="validation-modal-body">
+                <p class="validation-modal-message">Пожалуйста, исправьте следующие ошибки:</p>
+                <ul class="validation-list" id="validationList">
+                </ul>
+            </div>
+            <div class="validation-modal-footer">
+                <button class="validation-modal-btn validation-modal-btn-close" id="closeValidationModal">
+                    <i class="fas fa-times"></i> Понятно
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/zakaznye-perevozki.js"></script>
+</body>
+</html>

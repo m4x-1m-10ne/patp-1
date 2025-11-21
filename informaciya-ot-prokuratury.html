@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Информация от Прокуратуры г. Вологда - АО «ПАТП №1»</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <link href="styles/mediaqueries.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+</head>
+<body>
+    <header class="header-area">
+        <div class="container-fluid">
+            <div class="header-container">
+                <div class="header-left">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="https://mupatp1.ru/assets/template/img/logo_Ptp.png" alt="Логотип ПАТП №1">
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="header-center">
+                    <div class="main-menu">
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="https://mupatp1.ru/raspisanie/" class="menu-icon">Расписание<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="submenu-mainmenu">
+                                        <li><a href="https://citybus35.ru/" target="_blank">Умный транспорт</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="oplata-proezda.html" class="menu-icon">Оплата проезда<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="submenu-mainmenu">
+                                        <li><a href="https://bilet.nspk.ru/" target="_blank">Оплата банковской картой</a></li>
+                                        <li><a href="https://t-karta.ru" target="_blank">История поездок (кабинет)</a></li>
+                                        <li><a href="pravila-asop.html">Правила АСОП</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="uslugi.html" class="menu-icon">Услуги<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="submenu-mainmenu">
+                                        <li><a href="zakaznye-perevozki.html">Заказные перевозки</a></li>
+                                        <li><a href="passazhirskie-perevozki.html">Пассажирские перевозки</a></li>
+                                        <li><a href="perevozka-detej.html">Перевозка детей</a></li>
+                                        <li><a href="texnicheskoe-obsluzhivanie.html">Техническое обслуживание</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="o-kompanii.html" class="menu-icon">О компании<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="submenu-mainmenu">
+                                        <li><a href="novosti.html">Новости</a></li>
+                                        <li><a href="kontakty.html">Контакты</a></li>
+                                        <li><a href="avtopark.html">Автопарк</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="oficialnaya-informaciya.html" class="menu-icon">Официальная информация<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="submenu-mainmenu">
+                                        <li><a href="dokumenty.html">Документы</a></li>
+                                        <li><a href="protivodejstvie-korrupcii.html">Противодействие коррупции</a></li>
+                                        <li><a href="informaciya-ot-prokuratury.html">Информация от Прокуратуры г. Вологда</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                
+                <div class="header-right">
+                    <a href="rabota.html" class="header-btn">
+                        <i class="fas fa-briefcase"></i> РАБОТА У НАС
+                    </a>
+                    
+                    <button class="navbar-toggler" id="navbarToggler">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+            <div class="mobile-menu" id="mobileMenu">
+                <div class="mobile-menu-container">
+                    <div class="mobile-menu-section">
+                        <h3 class="mobile-menu-title">Расписание</h3>
+                        <ul class="mobile-menu-links">
+                            <li><a href="https://mupatp1.ru/raspisanie/"><i class="fas fa-bus"></i> Расписание автобусов</a></li>
+                            <li><a href="https://citybus35.ru/" target="_blank" class="external-link"><i class="fas fa-map-marked-alt"></i> Умный транспорт</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mobile-menu-section">
+                        <h3 class="mobile-menu-title">Оплата проезда</h3>
+                        <ul class="mobile-menu-links">
+                            <li><a href="oplata-proezda.html"><i class="fas fa-money-bill-wave"></i> Стоимость проезда</a></li>
+                            <li><a href="https://bilet.nspk.ru/" target="_blank" class="external-link"><i class="fas fa-credit-card"></i> Оплата картой</a></li>
+                            <li><a href="https://t-karta.ru" target="_blank" class="external-link"><i class="fas fa-history"></i> История поездок</a></li>
+                            <li><a href="pravila-asop.html"><i class="fas fa-file-contract"></i> Правила АСОП</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mobile-menu-section">
+                        <h3 class="mobile-menu-title">Услуги</h3>
+                        <ul class="mobile-menu-links">
+                            <li><a href="uslugi.html"><i class="fas fa-concierge-bell"></i> Все услуги</a></li>
+                            <li><a href="zakaznye-perevozki.html"><i class="fas fa-bus-alt"></i> Заказные перевозки</a></li>
+                            <li><a href="passazhirskie-perevozki.html"><i class="fas fa-users"></i> Пассажирские перевозки</a></li>
+                            <li><a href="perevozka-detej.html"><i class="fas fa-child"></i> Перевозка детей</a></li>
+                            <li><a href="texnicheskoe-obsluzhivanie.html"><i class="fas fa-cogs"></i> Техническое обслуживание</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mobile-menu-section">
+                        <h3 class="mobile-menu-title">О компании</h3>
+                        <ul class="mobile-menu-links">
+                            <li><a href="o-kompanii.html"><i class="fas fa-building"></i> О нас</a></li>
+                            <li><a href="novosti.html"><i class="far fa-newspaper"></i> Новости</a></li>
+                            <li><a href="kontakty.html"><i class="fas fa-address-book"></i> Контакты</a></li>
+                            <li><a href="avtopark.html"><i class="fas fa-car"></i> Автопарк</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mobile-menu-section">
+                        <h3 class="mobile-menu-title">Официальная информация</h3>
+                        <ul class="mobile-menu-links">
+                            <li><a href="oficialnaya-informaciya.html"><i class="fas fa-info-circle"></i> Официальная информация</a></li>
+                            <li><a href="dokumenty.html"><i class="fas fa-file-alt"></i> Документы</a></li>
+                            <li><a href="protivodejstvie-korrupcii.html"><i class="fas fa-gavel"></i> Противодействие коррупции</a></li>
+                            <li><a href="informaciya-ot-prokuratury.html"><i class="fas fa-balance-scale"></i> Информация от Прокуратуры</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+        <section class="breadcrumb-section">
+            <div class="container">
+                <h1>Информация от Прокуратуры г. Вологда</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                        <li class="breadcrumb-item"><a href="oficialnaya-informaciya.html">Официальная информация</a></li>
+                        <li class="breadcrumb-item active">Информация от Прокуратуры г. Вологда</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Информационные материалы Прокуратуры</h2>
+                <p>Разъяснения и информационные материалы от Прокуратуры города Вологды</p>
+            </div>
+
+            <div class="documents-category">
+                <h3 class="category-title">Разъяснения Прокуратуры 2023 год</h3>
+                <div class="documents-grid">
+                    <div class="document-card">
+                        <div class="document-content">
+                            <div class="document-icon">
+                                <i class="fas fa-gavel"></i>
+                            </div>
+                            <h3>Разъяснения Прокуратуры от 28.11.2023</h3>
+                            <p>Официальные разъяснения по правовым вопросам</p>
+                            <div class="document-meta">
+                                <div class="document-date">
+                                    <i class="far fa-calendar-alt"></i> 28.11.2023
+                                </div>
+                                <a href="https://mupatp1.ru/uploads/procuratura/Разъяснения%20Прокуратуры%20от%2028.11.2023%20г.pdf" class="document-btn" target="_blank">
+                                    <i class="fas fa-eye"></i> Посмотреть
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="document-card">
+                        <div class="document-content">
+                            <div class="document-icon">
+                                <i class="fas fa-gavel"></i>
+                            </div>
+                            <h3>Разъяснения Прокуратуры от 26.10.2023</h3>
+                            <p>Официальные разъяснения по правовым вопросам</p>
+                            <div class="document-meta">
+                                <div class="document-date">
+                                    <i class="far fa-calendar-alt"></i> 26.10.2023
+                                </div>
+                                <a href="https://mupatp1.ru/uploads/procuratura/Прокуратура_26.10.2023.pdf" class="document-btn" target="_blank">
+                                    <i class="fas fa-eye"></i> Посмотреть
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="document-card">
+                        <div class="document-content">
+                            <div class="document-icon">
+                                <i class="fas fa-gavel"></i>
+                            </div>
+                            <h3>Разъяснения Прокуратуры от 23.10.2023</h3>
+                            <p>Официальные разъяснения по правовым вопросам</p>
+                            <div class="document-meta">
+                                <div class="document-date">
+                                    <i class="far fa-calendar-alt"></i> 23.10.2023
+                                </div>
+                                <a href="https://mupatp1.ru/uploads/procuratura/Прокуратура_2310.pdf" class="document-btn" target="_blank">
+                                    <i class="fas fa-eye"></i> Посмотреть
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="document-card">
+                        <div class="document-content">
+                            <div class="document-icon">
+                                <i class="fas fa-gavel"></i>
+                            </div>
+                            <h3>Разъяснения Прокуратуры от 18.08.2023</h3>
+                            <p>Официальные разъяснения по правовым вопросам</p>
+                            <div class="document-meta">
+                                <div class="document-date">
+                                    <i class="far fa-calendar-alt"></i> 18.08.2023
+                                </div>
+                                <a href="https://mupatp1.ru/uploads/procuratura/18.08.2023.pdf" class="document-btn" target="_blank">
+                                    <i class="fas fa-eye"></i> Посмотреть
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="document-card">
+                        <div class="document-content">
+                            <div class="document-icon">
+                                <i class="fas fa-gavel"></i>
+                            </div>
+                            <h3>Разъяснения Прокуратуры от 18.07.2023</h3>
+                            <p>Официальные разъяснения по правовым вопросам</p>
+                            <div class="document-meta">
+                                <div class="document-date">
+                                    <i class="far fa-calendar-alt"></i> 18.07.2023
+                                </div>
+                                <a href="https://mupatp1.ru/uploads/procuratura/18.07.23.pdf" class="document-btn" target="_blank">
+                                    <i class="fas fa-eye"></i> Посмотреть
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="document-card">
+                        <div class="document-content">
+                            <div class="document-icon">
+                                <i class="fas fa-gavel"></i>
+                            </div>
+                            <h3>Разъяснения Прокуратуры от 04.04.2023</h3>
+                            <p>Официальные разъяснения по правовым вопросам</p>
+                            <div class="document-meta">
+                                <div class="document-date">
+                                    <i class="far fa-calendar-alt"></i> 04.04.2023
+                                </div>
+                                <a href="https://mupatp1.ru/uploads/procuratura/04.04.23_ПРокуратура.pdf" class="document-btn" target="_blank">
+                                    <i class="fas fa-eye"></i> Посмотреть
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="document-card">
+                        <div class="document-content">
+                            <div class="document-icon">
+                                <i class="fas fa-gavel"></i>
+                            </div>
+                            <h3>Разъяснения Прокуратуры от 01.03.2023</h3>
+                            <p>Официальные разъяснения по правовым вопросам</p>
+                            <div class="document-meta">
+                                <div class="document-date">
+                                    <i class="far fa-calendar-alt"></i> 01.03.2023
+                                </div>
+                                <a href="https://mupatp1.ru/uploads/procuratura/0103.pdf" class="document-btn" target="_blank">
+                                    <i class="fas fa-eye"></i> Посмотреть
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="documents-category">
+                <h3 class="category-title">Разъяснения Прокуратуры 2022 год</h3>
+                <div class="documents-grid">
+                    <div class="document-card">
+                        <div class="document-content">
+                            <div class="document-icon">
+                                <i class="fas fa-gavel"></i>
+                            </div>
+                            <h3>Разъяснения Прокуратуры от 31.10.2022</h3>
+                            <p>О правовых аспектах складывающейся внешнеполитической и экономической ситуации</p>
+                            <div class="document-meta">
+                                <div class="document-date">
+                                    <i class="far fa-calendar-alt"></i> 31.10.2022
+                                </div>
+                                <a href="https://mupatp1.ru/uploads/28/Прокуратура_3110.pdf" class="document-btn" target="_blank">
+                                    <i class="fas fa-eye"></i> Посмотреть
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="documents-category">
+                <h3 class="category-title">Видеоматериалы и социальная реклама</h3>
+                <div class="documents-grid">
+                    <div class="document-card">
+                        <div class="document-content">
+                            <div class="document-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <h3>Профилактика дистанционного мошенничества</h3>
+                            <p>Видеоролик-социальная реклама по профилактике мошенничества</p>
+                            <div class="document-meta">
+                                <div class="document-date">
+                                    <i class="far fa-calendar-alt"></i> Актуально
+                                </div>
+                                <a href="https://disk.yandex.ru/i/RWUYai3AgpOKag" class="document-btn" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> Подробнее
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="document-card">
+                        <div class="document-content">
+                            <div class="document-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <h3>Социальная реклама "Легкие деньги"</h3>
+                            <p>Видеоролик о профилактике финансового мошенничества</p>
+                            <div class="document-meta">
+                                <div class="document-date">
+                                    <i class="far fa-calendar-alt"></i> Актуально
+                                </div>
+                                <a href="https://disk.yandex.ru/i/vHM-qFz2LpzcyQ" class="document-btn" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> Подробнее
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="document-card">
+                        <div class="document-content">
+                            <div class="document-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <h3>Профилактика падения детей из окон</h3>
+                            <p>Видеоролик "Открытые окна" по безопасности детей</p>
+                            <div class="document-meta">
+                                <div class="document-date">
+                                    <i class="far fa-calendar-alt"></i> Актуально
+                                </div>
+                                <a href="https://vk.com/video/@patp1vologda?z=video-170941768_456239056%2Fclub170941768%2Fpl_-170941768_-2" class="document-btn" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> Подробнее
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="documents-category">
+                <h3 class="category-title">Правовые материалы и памятки</h3>
+                <div class="documents-grid">
+                    <div class="document-card">
+                        <div class="document-content">
+                            <div class="document-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3>Памятка по мошенничеству с банковской картой</h3>
+                            <p>«Не стань жертвой мошенничества с банковской картой»</p>
+                            <div class="document-meta">
+                                <div class="document-date">
+                                    <i class="far fa-calendar-alt"></i> Актуально
+                                </div>
+                                <a href="https://mupatp1.ru/uploads/28/Пямятка.pdf" class="document-btn" target="_blank">
+                                    <i class="fas fa-eye"></i> Посмотреть
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="document-card">
+                        <div class="document-content">
+                            <div class="document-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <h3>Меры поддержки для IT-компаний</h3>
+                            <p>Информация о мерах поддержки для IT-компаний</p>
+                            <div class="document-meta">
+                                <div class="document-date">
+                                    <i class="far fa-calendar-alt"></i> Актуально
+                                </div>
+                                <a href="https://mupatp1.ru/uploads/procuratura/06 02 23 ит  технологии.pptx" class="document-btn" target="_blank">
+                                    <i class="fas fa-download"></i> Скачать
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="document-card">
+                        <div class="document-content">
+                            <div class="document-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <h3>Меры государственной поддержки организаций и ИП</h3>
+                            <p>Информация о мерах государственной поддержки организаций и ИП</p>
+                            <div class="document-meta">
+                                <div class="document-date">
+                                    <i class="far fa-calendar-alt"></i> Актуально
+                                </div>
+                                <a href="https://mupatp1.ru/uploads/procuratura/06 02 23 меры поддержки.pptx" class="document-btn" target="_blank">
+                                    <i class="fas fa-download"></i> Скачать
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="document-card">
+                        <div class="document-content">
+                            <div class="document-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <h3>Повышение тарифов на ЖКУ</h3>
+                            <p>Повышение тарифов на ЖКУ произойдет с 1 декабря 2022 года</p>
+                            <div class="document-meta">
+                                <div class="document-date">
+                                    <i class="far fa-calendar-alt"></i> Актуально
+                                </div>
+                                <a href="https://mupatp1.ru/uploads/procuratura/24.11.2022 услуги ЖКХ.pptx" class="document-btn" target="_blank">
+                                    <i class="fas fa-download"></i> Скачать
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="document-card">
+                        <div class="document-content">
+                            <div class="document-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <h3>Пособия по безработице на 2023 год</h3>
+                            <p>Правительство Российской Федерации утвердило размеры пособий по безработице на 2023 год</p>
+                            <div class="document-meta">
+                                <div class="document-date">
+                                    <i class="far fa-calendar-alt"></i> Актуально
+                                </div>
+                                <a href="https://mupatp1.ru/uploads/procuratura/24.11.2022 пособия.pptx" class="document-btn" target="_blank">
+                                    <i class="fas fa-download"></i> Скачать
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="document-card">
+                        <div class="document-content">
+                            <div class="document-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <h3>Массовая невыплата зарплаты</h3>
+                            <p>Массовая невыплата зарплаты свыше одного месяца будет являться основанием для проведения внеплановой проверки</p>
+                            <div class="document-meta">
+                                <div class="document-date">
+                                    <i class="far fa-calendar-alt"></i> Актуально
+                                </div>
+                                <a href="https://mupatp1.ru/uploads/procuratura/24.11.2022 невыплата зарплаты.pptx" class="document-btn" target="_blank">
+                                    <i class="fas fa-download"></i> Скачать
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="document-card">
+                        <div class="document-content">
+                            <div class="document-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <h3>Авиаперелеты к месту лечения детей-инвалидов</h3>
+                            <p>При проезде к месту лечения отдельных категорий детей-инвалидов предоставляется возможность воспользоваться авиаперелетом</p>
+                            <div class="document-meta">
+                                <div class="document-date">
+                                    <i class="far fa-calendar-alt"></i> Актуально
+                                </div>
+                                <a href="https://mupatp1.ru/uploads/procuratura/24.11.2022 авиаперелет.pptx" class="document-btn" target="_blank">
+                                    <i class="fas fa-download"></i> Скачать
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="document-card">
+                        <div class="document-content">
+                            <div class="document-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <h3>Информация о туристском продукте</h3>
+                            <p>С 1 марта 2023 г. заказчики туристского продукта смогут получать необходимую информацию в единой информационной системе</p>
+                            <div class="document-meta">
+                                <div class="document-date">
+                                    <i class="far fa-calendar-alt"></i> Актуально
+                                </div>
+                                <a href="https://mupatp1.ru/uploads/procuratura/24.11.2022 туристы.pptx" class="document-btn" target="_blank">
+                                    <i class="fas fa-download"></i> Скачать
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="document-card">
+                        <div class="document-content">
+                            <div class="document-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <h3>Обеспечение исполнения госконтрактов</h3>
+                            <p>Установлены предельные размеры обеспечения исполнения госконтрактов с авансовыми платежами</p>
+                            <div class="document-meta">
+                                <div class="document-date">
+                                    <i class="far fa-calendar-alt"></i> Актуально
+                                </div>
+                                <a href="https://mupatp1.ru/uploads/procuratura/24.11.2022 госконтракт.pptx" class="document-btn" target="_blank">
+                                    <i class="fas fa-download"></i> Скачать
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="documents-category">
+                <h3 class="category-title">Дополнительные правовые материалы</h3>
+                <div class="documents-grid">
+                    <div class="document-card">
+                        <div class="document-content">
+                            <div class="document-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <h3>Звание «Мать-героиня»</h3>
+                            <p>Президентом Российской Федерации установлено звание «Мать-героиня»</p>
+                            <div class="document-meta">
+                                <div class="document-date">
+                                    <i class="far fa-calendar-alt"></i> Актуально
+                                </div>
+                                <a href="https://mupatp1.ru/uploads/28/Президентом Российской Федерации установлено звание «Мать-героиня» .pdf" class="document-btn" target="_blank">
+                                    <i class="fas fa-eye"></i> Посмотреть
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="document-card">
+                        <div class="document-content">
+                            <div class="document-icon">
+                                <i class="fas fa-hand-holding-usd"></i>
+                            </div>
+                            <h3>Льготное кредитование МСП</h3>
+                            <p>Утверждены изменения в программу льготного кредитования субъектов МСП и самозанятых лиц</p>
+                            <div class="document-meta">
+                                <div class="document-date">
+                                    <i class="far fa-calendar-alt"></i> Актуально
+                                </div>
+                                <a href="https://mupatp1.ru/uploads/28/Утверждены изменения в программу льготного кредитования субъектов МСП и самозанятых лиц.pdf" class="document-btn" target="_blank">
+                                    <i class="fas fa-eye"></i> Посмотреть
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="document-card">
+                        <div class="document-content">
+                            <div class="document-icon">
+                                <i class="fas fa-boxes"></i>
+                            </div>
+                            <h3>Параллельный импорт</h3>
+                            <p>Перечень товаров, в отношении которых разрешен параллельный импорт</p>
+                            <div class="document-meta">
+                                <div class="document-date">
+                                    <i class="far fa-calendar-alt"></i> Актуально
+                                </div>
+                                <a href="https://mupatp1.ru/uploads/28/Перечень товаров, в отношении которых разрешен параллельный импорт 12.08.22.pdf" class="document-btn" target="_blank">
+                                    <i class="fas fa-eye"></i> Посмотреть
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="document-card">
+                        <div class="document-content">
+                            <div class="document-icon">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                            <h3>Специальные экономические меры</h3>
+                            <p>О применении специальных экономических мер в финансовой и топливно-энергетической сферах</p>
+                            <div class="document-meta">
+                                <div class="document-date">
+                                    <i class="far fa-calendar-alt"></i> Актуально
+                                </div>
+                                <a href="https://mupatp1.ru/uploads/28/О применении специальных экономических мер 12.08.22.pdf" class="document-btn" target="_blank">
+                                    <i class="fas fa-eye"></i> Посмотреть
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="document-card">
+                        <div class="document-content">
+                            <div class="document-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <h3>Ответственность за сотрудничество с иностранными государствами</h3>
+                            <p>Об ответственности за сотрудничество с иностранным государством или иностранной организацией</p>
+                            <div class="document-meta">
+                                <div class="document-date">
+                                    <i class="far fa-calendar-alt"></i> Актуально
+                                </div>
+                                <a href="https://mupatp1.ru/uploads/28/Об ответственности за сотрудничество с иностранным государством или иностранной организацией.pdf" class="document-btn" target="_blank">
+                                    <i class="fas fa-eye"></i> Посмотреть
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="document-card">
+                        <div class="document-content">
+                            <div class="document-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h3>Обучение школьников программированию</h3>
+                            <p>Школьников бесплатно обучат языкам программирования</p>
+                            <div class="document-meta">
+                                <div class="document-date">
+                                    <i class="far fa-calendar-alt"></i> Актуально
+                                </div>
+                                <a href="https://mupatp1.ru/uploads/28/Школьников бесплатно обучат языкам программирования..pdf" class="document-btn" target="_blank">
+                                    <i class="fas fa-eye"></i> Посмотреть
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="document-card">
+                        <div class="document-content">
+                            <div class="document-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <h3>Господдержка семей с детьми</h3>
+                            <p>Продлены меры господдержки семей, имеющих детей, в части погашения обязательств по ипотечным жилищным кредитам</p>
+                            <div class="document-meta">
+                                <div class="document-date">
+                                    <i class="far fa-calendar-alt"></i> Актуально
+                                </div>
+                                <a href="https://mupatp1.ru/uploads/28/Продлены меры господдержки семей, имеющих детей.pdf" class="document-btn" target="_blank">
+                                    <i class="fas fa-eye"></i> Посмотреть
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="document-card">
+                        <div class="document-content">
+                            <div class="document-icon">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                            <h3>Новые правила расчета неустойки по долевому строительству</h3>
+                            <p>Новые правила расчета неустойки за нарушение условий договора о долевом строительстве</p>
+                            <div class="document-meta">
+                                <div class="document-date">
+                                    <i class="far fa-calendar-alt"></i> Актуально
+                                </div>
+                                <a href="https://mupatp1.ru/uploads/28/Новые правила расчета неустойки за нарушение условий договора о долевом строительстве..pptx" class="document-btn" target="_blank">
+                                    <i class="fas fa-download"></i> Скачать
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="document-card">
+                        <div class="document-content">
+                            <div class="document-icon">
+                                <i class="fas fa-ban"></i>
+                            </div>
+                            <h3>Меры против фейковой информации</h3>
+                            <p>О мерах уголовно-правового характера по недопущению фейковой информации о деятельности Вооруженных Сил и госструктур России</p>
+                            <div class="document-meta">
+                                <div class="document-date">
+                                    <i class="far fa-calendar-alt"></i> Актуально
+                                </div>
+                                <a href="https://mupatp1.ru/uploads/28/О мерах уголовно-правового характера по недопущению фейковой информации о деятельности Вооруженных Сил и госструктур России. (1).pdf" class="document-btn" target="_blank">
+                                    <i class="fas fa-eye"></i> Посмотреть
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="document-card">
+                        <div class="document-content">
+                            <div class="document-icon">
+                                <i class="fas fa-gavel"></i>
+                            </div>
+                            <h3>Мораторий на банкротство</h3>
+                            <p>Мораторий на возбуждение дел о банкротстве до 01 октября 2022 года</p>
+                            <div class="document-meta">
+                                <div class="document-date">
+                                    <i class="far fa-calendar-alt"></i> Актуально
+                                </div>
+                                <a href="https://mupatp1.ru/uploads/28/мораторий на возбуждение дел-конвертирован.pdf" class="document-btn" target="_blank">
+                                    <i class="fas fa-eye"></i> Посмотреть
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="document-card">
+                        <div class="document-content">
+                            <div class="document-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h3>Подтверждение образования</h3>
+                            <p>Граждане, прервавшие свое обучение за границей, могут подтвердить своё образование в упрощенном порядке</p>
+                            <div class="document-meta">
+                                <div class="document-date">
+                                    <i class="far fa-calendar-alt"></i> Актуально
+                                </div>
+                                <a href="https://mupatp1.ru/uploads/28/обучение 02.06-2.pdf" class="document-btn" target="_blank">
+                                    <i class="fas fa-eye"></i> Посмотреть
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3><a href="o-kompanii.html" style="color: white; text-decoration: none;">О нашей компании</a></h3>
+                    
+                    <div class="footer-contact-info">
+                        <div class="footer-contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+78172556670">+7 (8172) 55-66-70</a>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:mail@mupatp1.ru">mail@mupatp1.ru</a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-bottom-content">
+                        <div class="footer-image-container">
+                            <img src="img/win.png" alt="Победа">
+                        </div>
+                        <div class="social-links">
+                            <a href="https://vk.com/patp1vologda" target="_blank"><i class="fab fa-vk"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Основные разделы</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://mupatp1.ru/raspisanie/">Расписание</a></li>
+                        <li><a href="oplata-proezda.html">Оплата проезда</a></li>
+                        <li><a href="uslugi.html">Услуги</a></li>
+                        <li><a href="novosti.html">Новости</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Полезные ссылки</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://citybus35.ru/" target="_blank">Умный транспорт</a></li>
+                        <li><a href="rabota.html">Работа у нас</a></li>
+                        <li><a href="https://yc.mupatp1.ru/" target="_blank">Учебный центр</a></li>
+                        <li><a href="dokumenty.html">Документы</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 АО «ПАТП №1». Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

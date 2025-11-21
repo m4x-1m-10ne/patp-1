@@ -169,19 +169,9 @@ if (document.getElementById('ymap')) {
         });
         
         document.getElementById('mapPatpBtn').addEventListener('click', function() {
-            myMap.panTo(coords, {
-                duration: 1000,
-                timingFunction: 'ease-in-out'
-            });
-            
-            setTimeout(function() {
-                myMap.setZoom(16);
-            }, 500);
-            
-            setTimeout(function() {
-                myPlacemark.balloon.open();
-            }, 800);
-            
+            myMap.setCenter(coords);
+            myMap.setZoom(16);
+            myPlacemark.balloon.open();
             showMapNotification('Возврат к местоположению ПАТП №1');
             
             this.classList.add('active');

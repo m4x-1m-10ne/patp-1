@@ -168,18 +168,6 @@ if (document.getElementById('ymap')) {
             }
         });
         
-        document.getElementById('mapPatpBtn').addEventListener('click', function() {
-            myMap.setCenter(coords);
-            myMap.setZoom(16);
-            myPlacemark.balloon.open();
-            showMapNotification('Возврат к местоположению ПАТП №1');
-            
-            this.classList.add('active');
-            setTimeout(() => {
-                this.classList.remove('active');
-            }, 1000);
-        });
-        
         document.addEventListener('fullscreenchange', exitHandler);
         document.addEventListener('webkitfullscreenchange', exitHandler);
         document.addEventListener('mozfullscreenchange', exitHandler);

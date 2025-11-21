@@ -47,28 +47,6 @@ if (document.getElementById('ymap')) {
     var myMap;
     var myPlacemark;
     var currentMapType = 'map';
-    var isMapActive = false;
-    var inactivityTimer;
-    
-    function resetInactivityTimer() {
-        clearTimeout(inactivityTimer);
-        if (isMapActive) {
-            inactivityTimer = setTimeout(function() {
-                myMap.behaviors.disable(['scrollZoom', 'dblClickZoom', 'drag', 'multiTouch']);
-                isMapActive = false;
-                showMapNotification('Карта деактивирована. Нажмите на карту для управления');
-            }, 10000);
-        }
-    }
-    
-    function activateMap() {
-        if (!isMapActive) {
-            isMapActive = true;
-            myMap.behaviors.enable(['scrollZoom', 'dblClickZoom', 'drag', 'multiTouch']);
-            showMapNotification('Карта активирована. Теперь можно масштабировать и перемещать');
-        }
-        resetInactivityTimer();
-    }
     
     ymaps.ready(function () {
         myMap = new ymaps.Map('ymap', {
@@ -91,43 +69,9 @@ if (document.getElementById('ymap')) {
         
         myPlacemark.events.add('click', function (e) {
             myPlacemark.balloon.open();
-            resetInactivityTimer();
-        });
-        
-        myMap.behaviors.disable(['scrollZoom', 'dblClickZoom', 'drag', 'multiTouch']);
-        
-        myMap.events.add('click', function (e) {
-            activateMap();
-        });
-        
-        myMap.events.add('mousemove', function (e) {
-            if (isMapActive) {
-                resetInactivityTimer();
-            }
-        });
-        
-        myMap.events.add('wheel', function (e) {
-            if (isMapActive) {
-                resetInactivityTimer();
-            }
-        });
-        
-        myMap.events.add('actiontick', function (e) {
-            if (isMapActive) {
-                resetInactivityTimer();
-            }
-        });
-        
-        document.addEventListener('click', function(e) {
-            if (isMapActive && !e.target.closest('#mapContainer')) {
-                myMap.behaviors.disable(['scrollZoom', 'dblClickZoom', 'drag', 'multiTouch']);
-                isMapActive = false;
-                clearTimeout(inactivityTimer);
-            }
         });
         
         document.getElementById('mapLocateBtn').addEventListener('click', function() {
-            activateMap();
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function(position) {
                     var userCoords = [position.coords.latitude, position.coords.longitude];
@@ -143,7 +87,6 @@ if (document.getElementById('ymap')) {
                     myMap.geoObjects.add(userPlacemark);
                     myMap.setCenter(userCoords, 15, {duration: 1000});
                     showMapNotification('Ваше местоположение отмечено на карте');
-                    resetInactivityTimer();
                 }, function(error) {
                     console.error('Ошибка получения геолокации:', error);
                     showMapNotification('Не удалось определить ваше местоположение');
@@ -154,7 +97,6 @@ if (document.getElementById('ymap')) {
         });
         
         document.getElementById('mapLayerBtn').addEventListener('click', function() {
-            activateMap();
             var mapTypes = ['map', 'satellite', 'hybrid'];
             var currentIndex = mapTypes.indexOf(currentMapType);
             var nextIndex = (currentIndex + 1) % mapTypes.length;
@@ -166,11 +108,9 @@ if (document.getElementById('ymap')) {
             this.innerHTML = '<i class="fas ' + icons[nextIndex] + '"></i>';
             
             showMapNotification('Тип карты изменен');
-            resetInactivityTimer();
         });
         
         document.getElementById('mapFullscreenBtn').addEventListener('click', function() {
-            activateMap();
             var mapContainer = document.getElementById('mapContainer');
             
             if (!document.fullscreenElement) {
@@ -196,7 +136,18 @@ if (document.getElementById('ymap')) {
                 mapContainer.classList.remove('map-fullscreen');
                 this.innerHTML = '<i class="fas fa-expand"></i>';
             }
-            resetInactivityTimer();
+        });
+        
+        document.getElementById('mapPatpBtn').addEventListener('click', function() {
+            myMap.setCenter(coords, 16, {
+                duration: 1000
+            });
+            
+            setTimeout(function() {
+                myPlacemark.balloon.open();
+            }, 1000);
+            
+            showMapNotification('Возврат к местоположению ПАТП №1');
         });
         
         document.addEventListener('fullscreenchange', exitHandler);

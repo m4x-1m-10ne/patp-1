@@ -375,31 +375,6 @@
         font-size: 14px;
         line-height: 1.5;
     }
-    
-    .vacancies-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .training-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .training-buttons .btn {
-        min-width: 280px;
-    }
-    
-    .reviews-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .contact-item {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-    }
 }
 
 @media (max-width: 480px) {
@@ -431,32 +406,6 @@
     .advantage-card p {
         font-size: 13px;
     }
-    
-    .vacancy-card {
-        padding: 20px;
-    }
-    
-    .vacancy-salary {
-        font-size: 24px;
-    }
-    
-    .review-card {
-        padding: 20px;
-    }
-    
-    .review-header {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-    }
-    
-    .cta-content h2 {
-        font-size: 24px;
-    }
-    
-    .cta-content p {
-        font-size: 16px;
-    }
 }
 
 @media (max-width: 360px) {
@@ -487,18 +436,5 @@
     .advantage-card p {
         font-size: 12px;
         line-height: 1.4;
-    }
-    
-    .vacancies-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-    
-    .vacancy-card {
-        padding: 15px;
-    }
-    
-    .training-buttons .btn {
-        min-width: 250px;
     }
 }

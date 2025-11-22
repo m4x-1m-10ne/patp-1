@@ -126,63 +126,25 @@ document.addEventListener('DOMContentLoaded', function() {
             e.stopPropagation();
             activateCard(this);
         });
-        
-        if (!isMobile) {
-            card.addEventListener('mouseenter', function() {
-                if (!this.classList.contains('active')) {
-                    this.style.transform = 'translateY(-10px)';
-                    this.style.boxShadow = '0 12px 25px rgba(0, 0, 0, 0.15)';
-                }
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                if (!this.classList.contains('active')) {
-                    this.style.transform = '';
-                    this.style.boxShadow = '';
-                }
-            });
-        }
     });
     
     document.addEventListener('click', function(e) {
         if (!isMobile) {
-            if (!e.target.closest('.process-step-card') && 
-                !e.target.closest('.step-details-desktop')) {
+            if (!e.target.closest('.process-step-card')) {
                 deactivateAllCards();
             }
         } else {
-            if (stepModal.classList.contains('active') && 
-                !e.target.closest('.step-modal-content') && 
-                !e.target.closest('.process-step-card')) {
+            if (stepModal.classList.contains('active') && !e.target.closest('.step-modal-content')) {
                 closeStepModal();
             }
         }
     });
     
-    stepModalClose.addEventListener('click', function(e) {
-        e.stopPropagation();
-        closeStepModal();
-    });
-    
-    stepModal.addEventListener('click', function(e) {
-        if (e.target === stepModal) {
-            closeStepModal();
-        }
-    });
-    
-    const modalContent = stepModal.querySelector('.step-modal-content');
-    if (modalContent) {
-        modalContent.addEventListener('click', function(e) {
-            e.stopPropagation();
-        });
-    }
+    stepModalClose.addEventListener('click', closeStepModal);
     
     window.addEventListener('resize', function() {
-        const newIsMobile = window.innerWidth < 992;
-        if (isMobile !== newIsMobile) {
-            if (Math.abs(window.innerWidth - window.screen.width) > 100) {
-                location.reload();
-            }
+        if (window.innerWidth < 992 !== isMobile) {
+            location.reload();
         }
     });
 });

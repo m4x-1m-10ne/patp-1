@@ -34,7 +34,6 @@
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     margin-bottom: 40px;
-    border-left: 5px solid var(--primary-color);
 }
 
 .contact-header {
@@ -59,117 +58,201 @@
     margin: 0 auto;
 }
 
-.contact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
+.contact-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
     margin-top: 30px;
 }
 
-.contact-card {
+.contact-badge {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 25px;
     background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
-    padding: 30px;
-    border-radius: 12px;
-    border: 1px solid #e2e8f0;
+    border: 2px solid #e2e8f0;
+    border-radius: 50px;
     transition: all 0.3s ease;
+    min-width: 280px;
+    max-width: 350px;
     position: relative;
     overflow: hidden;
 }
 
-.contact-card::before {
+.contact-badge::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    width: 4px;
+    width: 100%;
     height: 100%;
-    background: var(--primary-color);
-    transition: width 0.3s ease;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
 }
 
-.contact-card:hover::before {
-    width: 8px;
+.contact-badge:hover::before {
+    opacity: 0.05;
 }
 
-.contact-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+.contact-badge:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     border-color: var(--primary-color);
 }
 
-.contact-card-header {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
-.contact-icon {
+.badge-icon {
     width: 50px;
     height: 50px;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    border-radius: 12px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     font-size: 20px;
     transition: all 0.3s ease;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
 }
 
-.contact-card:hover .contact-icon {
-    transform: scale(1.1) rotate(5deg);
+.contact-badge:hover .badge-icon {
+    transform: scale(1.1) rotate(10deg);
 }
 
-.contact-card-title {
-    font-size: 18px;
+.badge-content {
+    flex: 1;
+    position: relative;
+    z-index: 2;
+}
+
+.badge-title {
+    font-size: 16px;
     font-weight: 600;
     color: var(--text-color);
-    margin: 0;
+    margin-bottom: 5px;
+    display: block;
 }
 
-.contact-details {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+.badge-value {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 3px;
+    display: block;
 }
 
-.contact-item {
+.badge-description {
+    font-size: 13px;
+    color: #666;
+    display: block;
+}
+
+.contact-pills {
     display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.contact-pill {
+    display: inline-flex;
     align-items: center;
     gap: 12px;
-    padding: 8px 0;
-    border-bottom: 1px solid #f1f5f9;
+    padding: 15px 20px;
+    background: white;
+    border: 2px solid var(--primary-color);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: var(--text-color);
 }
 
-.contact-item:last-child {
-    border-bottom: none;
+.contact-pill:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(58, 108, 230, 0.3);
+    text-decoration: none;
 }
 
-.contact-item i {
-    width: 20px;
+.contact-pill:hover .pill-icon {
+    background: white;
     color: var(--primary-color);
+}
+
+.pill-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.pill-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.pill-main {
+    font-weight: 600;
     font-size: 16px;
 }
 
-.contact-item strong {
-    color: var(--text-color);
+.pill-sub {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.contact-alert {
+    background: linear-gradient(135deg, #fff9e6, #fff3cd);
+    border: 2px solid #ffd700;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.alert-icon {
+    width: 40px;
+    height: 40px;
+    background: #ffd700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.alert-content {
+    flex: 1;
+}
+
+.alert-title {
     font-weight: 600;
+    color: #856404;
+    margin-bottom: 5px;
 }
 
-.contact-item span {
-    color: #666;
+.alert-text {
+    color: #856404;
     font-size: 14px;
-}
-
-.contact-note {
-    background: #fff9e6;
-    border-left: 4px solid #ffd700;
-    padding: 15px 20px;
-    margin-top: 20px;
-    border-radius: 8px;
-    font-size: 14px;
-    color: #666;
+    margin: 0;
 }
 
 .requirements-list {
@@ -210,23 +293,24 @@
         padding: 25px;
     }
     
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
+    .contact-badges {
+        flex-direction: column;
+        align-items: center;
     }
     
-    .contact-card {
-        padding: 20px;
+    .contact-badge {
+        min-width: 100%;
+        max-width: 100%;
     }
     
-    .contact-card-header {
-        gap: 12px;
+    .contact-pills {
+        flex-direction: column;
+        align-items: stretch;
     }
     
-    .contact-icon {
-        width: 45px;
-        height: 45px;
-        font-size: 18px;
+    .contact-pill {
+        justify-content: center;
+        text-align: center;
     }
     
     .requirements-list {
@@ -241,7 +325,18 @@
         gap: 10px;
     }
     
-    .contact-card-header {
+    .contact-badge {
+        padding: 15px 20px;
+        gap: 12px;
+    }
+    
+    .badge-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+    
+    .contact-alert {
         flex-direction: column;
         text-align: center;
         gap: 10px;

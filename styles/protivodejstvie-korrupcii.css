@@ -1,68 +1,40 @@
-.contact-info {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    margin-bottom: 40px;
-    line-height: 1.8;
+.documents-background .documents-grid {
+    align-items: stretch;
 }
 
-.contact-info h3 {
-    color: var(--primary-color);
-    margin-bottom: 20px;
-    font-size: 24px;
-    text-align: center;
+.documents-background .document-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
-.contact-methods {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
+.documents-background .document-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
-.contact-method {
-    background: var(--light-bg);
-    padding: 20px;
-    border-radius: 8px;
-    border-left: 4px solid var(--primary-color);
+.documents-background .document-icon {
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 15px;
 }
 
-.contact-method h4 {
-    color: var(--text-color);
+.documents-background .document-content h3 {
+    min-height: 60px;
+    display: flex;
+    align-items: flex-start;
     margin-bottom: 10px;
-    font-size: 18px;
 }
 
-.contact-method p {
-    margin-bottom: 8px;
-    color: #555;
+.documents-background .document-content p {
+    flex-grow: 1;
+    margin-bottom: 15px;
 }
 
-.info-list {
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    margin-bottom: 30px;
-}
-
-.info-list ul {
-    padding-left: 20px;
-}
-
-.info-list li {
-    margin-bottom: 10px;
-    color: #555;
-    line-height: 1.6;
-}
-
-@media (max-width: 992px) {
-    .documents-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
+/* Исправленные медиа-запросы */
 @media (max-width: 768px) {
     .documents-grid {
         grid-template-columns: 1fr;
@@ -78,9 +50,14 @@
         padding: 15px;
     }
     
-    .document-icon {
-        height: 80px;
-        font-size: 30px;
+    .documents-background .document-icon {
+        min-height: 35px;
+        font-size: 24px;
+    }
+    
+    .documents-background .document-content h3 {
+        min-height: 50px;
+        font-size: 16px;
     }
     
     .contact-methods {
@@ -107,19 +84,18 @@
         padding: 12px;
     }
     
-    .document-icon {
-        height: 70px;
-        font-size: 25px;
+    .documents-background .document-icon {
+        min-height: 30px;
+        font-size: 22px;
     }
     
-    .document-content h3 {
-        font-size: 16px;
-        min-height: auto;
+    .documents-background .document-content h3 {
+        min-height: 45px;
+        font-size: 15px;
     }
     
     .document-content p {
         font-size: 13px;
-        min-height: auto;
     }
     
     .document-btn {

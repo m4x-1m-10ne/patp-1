@@ -76,7 +76,6 @@ const stepData = {
 
 document.addEventListener('DOMContentLoaded', function() {
     const stepCards = document.querySelectorAll('.process-step-card');
-    const processContainer = document.querySelector('.process-container');
     const stepModal = document.getElementById('stepModal');
     const stepModalClose = document.getElementById('stepModalClose');
     const isMobile = window.innerWidth < 992;
@@ -113,6 +112,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
+    function closeStepModal() {
+        stepModal.classList.remove('active');
+        document.body.classList.remove('modal-open');
+    }
+    
     if (!isMobile && stepCards.length > 0) {
         activateCard(stepCards[0]);
     }
@@ -141,24 +145,36 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     document.addEventListener('click', function(e) {
-        if (!isMobile && !e.target.closest('.process-step-card')) {
-            if (stepCards.length > 0 && !stepCards[0].classList.contains('active')) {
-                activateCard(stepCards[0]);
+        if (!isMobile) {
+            if (!e.target.closest('.process-step-card') && !e.target.closest('.step-details-desktop')) {
+                if (stepCards.length > 0) {
+                    activateCard(stepCards[0]);
+                }
+            }
+        } else {
+            if (stepModal.classList.contains('active') && !e.target.closest('.step-modal-content') && !e.target.closest('.process-step-card')) {
+                closeStepModal();
             }
         }
     });
     
-    stepModalClose.addEventListener('click', function() {
-        stepModal.classList.remove('active');
-        document.body.classList.remove('modal-open');
+    stepModalClose.addEventListener('click', function(e) {
+        e.stopPropagation();
+        closeStepModal();
     });
     
     stepModal.addEventListener('click', function(e) {
         if (e.target === stepModal) {
-            stepModal.classList.remove('active');
-            document.body.classList.remove('modal-open');
+            closeStepModal();
         }
     });
+    
+    const modalContent = stepModal.querySelector('.step-modal-content');
+    if (modalContent) {
+        modalContent.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    }
     
     window.addEventListener('resize', function() {
         const newIsMobile = window.innerWidth < 992;
@@ -169,4 +185,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-

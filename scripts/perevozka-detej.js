@@ -117,14 +117,6 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.remove('modal-open');
     }
     
-    function deactivateAll() {
-        if (!isMobile) {
-            deactivateAllCards();
-        } else {
-            closeStepModal();
-        }
-    }
-    
     if (!isMobile && stepCards.length > 0) {
         activateCard(stepCards[0]);
     }
@@ -153,16 +145,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     document.addEventListener('click', function(e) {
-        if (!e.target.closest('.process-step-card') && 
-            !e.target.closest('.step-details-desktop') && 
-            !e.target.closest('.step-modal-content')) {
-            
-            if (!isMobile) {
+        if (!isMobile) {
+            if (!e.target.closest('.process-step-card') && 
+                !e.target.closest('.step-details-desktop')) {
                 deactivateAllCards();
-            } else {
-                if (stepModal.classList.contains('active')) {
-                    closeStepModal();
-                }
+            }
+        } else {
+            if (stepModal.classList.contains('active') && 
+                !e.target.closest('.step-modal-content') && 
+                !e.target.closest('.process-step-card')) {
+                closeStepModal();
             }
         }
     });
